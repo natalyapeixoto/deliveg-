@@ -1,5 +1,4 @@
 
-##deliveg
 
 ### para contrinuir com o projeto
 git clone url-do-projeto
