@@ -1,0 +1,106 @@
+CREATE DATABASE deliveg_db;
+
+CREATE TABLE restaurante(
+	id_restaurante INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    nome_restaurante VARCHAR(65) NOT NULL,
+    email VARCHAR(65) NOT NULL UNIQUE,
+    id_endereco int NOT NULL,
+    senha VARCHAR(65) NOT NULL,
+    cnpj VARCHAR(65) NOT NULL, 
+    tipo_usuario INT,
+    status_cadastro INT 
+);
+
+CREATE TABLE categoria(
+	id_categoria INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    nome VARCHAR(65) NOT NULL
+);
+
+CREATE TABLE produto(
+	id_produto INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    id_categoria int,
+    nome VARCHAR(65) NOT NULL,
+    tag VARCHAR(65),
+    descricao TEXT NOT NULL,
+    foto VARCHAR(255) NOT NULL, 
+    estoque INT NOT NULL
+);
+
+CREATE TABLE item_pedido(
+	id_item_pedido INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    id_produto INT,
+    quantidade INT NOT NULL
+);
+
+CREATE TABLE status_pedido(
+	id_status_pedido INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    nome varchar(65) 
+);
+
+CREATE TABLE pedido(
+	id_pedido INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    id_restaurante INT,
+    id_status_pedido INT,
+    pedido_id INT
+);
+
+CREATE TABLE tipo_usuario(
+	id_tipo_usuario INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    tipo_de_usuario VARCHAR(65) NOT NULL
+);
+
+CREATE TABLE endereco(
+	id_endereco INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    rua VARCHAR(255) NOT NULL,
+    numero VARCHAR(65) NOT NULL,
+    cep VARCHAR(65) NOT NULL,
+    cidade VARCHAR(65) NOT NULL,
+    estado VARCHAR(65) NOT NULL 
+    );
+
+CREATE TABLE status_restaurante(
+	id_status_restaurante INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    status_do_restaurante VARCHAR(65) NOT NULL
+);
+
+ALTER TABLE produto 
+ADD FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria);
+
+ALTER TABLE item_pedido 
+ADD FOREIGN KEY (id_produto) REFERENCES produto(id_produto);
+
+ALTER TABLE pedido 
+ADD FOREIGN KEY (id_pedido) REFERENCES item_pedido(id_item_pedido);
+
+ALTER TABLE pedido 
+ADD FOREIGN KEY (id_status_pedido) REFERENCES status_pedido(id_status_pedido);
+
+ALTER TABLE pedido 
+ADD FOREIGN KEY (id_restaurante) REFERENCES restaurante(id_restaurante);
+
+ALTER TABLE restaurante
+ADD FOREIGN KEY (endereco) REFERENCES endereco(id_endereco);
+
+ALTER TABLE restaurante
+ADD FOREIGN KEY (tipo_usuario) REFERENCES tipo_usuario(id_tipo_usuario);
+
+ALTER TABLE restaurante
+ADD FOREIGN KEY (status_cadastro) REFERENCES status_restaurante(id_status_restaurante);
+
+INSERT INTO categoria (nome) VALUES ('legume');
+INSERT INTO categoria (nome) VALUES ('verdura');
+INSERT INTO categoria (nome) VALUES ('fruta');
+INSERT INTO categoria (nome) VALUES ('fruta');
+
+INSERT INTO status_pedido(nome) values('aguardando');
+INSERT INTO status_pedido(nome) values('aprovado');
+INSERT INTO status_pedido(nome) values('não_aprovado');
+INSERT INTO status_pedido(nome) values('em_transporte');
+INSERT INTO status_pedido(nome) values('entregue');
+
+INSERT INTO status_restaurante(status_do_restaurante) values('ativo');
+INSERT INTO status_restaurante(status_do_restaurante) values('inativo');
+INSERT INTO status_restaurante(status_do_restaurante) values('aguardando_aprovacao');
+
+INSERT INTO tipo_usuario(tipo_de_usuario) values('adm');
+INSERT INTO tipo_usuario(tipo_de_usuario) values('restaurante');
