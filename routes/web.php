@@ -19,6 +19,24 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/carrinho', function () {
+    return view('carrinho');
+});
+
+Route::get('/loja', function() {
+    return view('loja');
+});
+
+Route::get('/perfil', function() {
+    return view('perfil');
+});
+
+Route::get('/cadastro', function() {
+    return view('cadastro');
+});
+
+
+
 
 
 

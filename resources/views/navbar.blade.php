@@ -1,34 +1,27 @@
-
+<header  id="main-header">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">Deliveg</a>
+        <a class="navbar-brand" href="/">
+            <img src="./img/logo2.jpeg" alt="Logo Deliveg" width="auto" height="40px">
+        </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto " >
-                <li class="nav-item active navbar-notlogged">
-                    <a class="nav-link" href="./perfil/perfil.php">Perfil<span class="sr-only">(current)</span></a>
+        
+        <div id="navbarSupportedContent" class="navbar-right collapse navbar-collapse">
+            <ul class="navbar-nav" >
+                <li class="nav-item navbar-notlogged">
+                    <a class="link-green" href="/perfil">Perfil</a>
                 </li>
                 <li class="nav-item navbar-notlogged">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="link-green" href="/loja" title="Loja">Loja</a>
                 </li>
-                <li class="nav-item dropdown navbar-notlogged">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <li class="nav-item navbar-notlogged">
+                    <a class="link-green" href="/carrinho">Carrinho</a>
                 </li>
             </ul>
-            <a href="./login/login.html" class="btn btn-primary my-2 my-sm-0" type="submit">Login</a>
-            
+            <a href="/login" class="btn btn-success my-2 my-sm-0">Entrar</a>
         </div>
     </nav>
-
+</header>
