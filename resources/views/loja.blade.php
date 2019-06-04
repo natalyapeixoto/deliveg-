@@ -20,104 +20,28 @@
     <div class="row">
         <div class="col-md-3 col-sm-12">
             <ul class="list-group">
-                <li class="list-group-item list-group-item-action">Frutas</li>
-                <li class="list-group-item list-group-item-action">Verduras</li>
-                <li class="list-group-item list-group-item-action">Legumes</li>
-                <li class="list-group-item list-group-item-action">Outros</li>
+            @foreach( $categorias as $categoria )
+                <a href="/loja/{{$categoria->id_categoria}}"><li class="list-group-item list-group-item-action">{{ $categoria->nome }}</li></a>
+            @endforeach
             </ul>
         </div>
     <div class="col-md-9 col-sm-12">
         <section id="produtos-wrapper" class="row">
+
+            @foreach($produtos as $produto)
             <div class="col-md-4 col-sm-6 col-xs-1">
                 <div class="card">
                     <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
                     <div class="card-body">
-                        <h5 class="nome-produto-card">Alface</h5>
-                        <p class="preco-card">R$ 1,99/kg</p>
+                        <h5 class="nome-produto-card">{{ $produto->nome }}</h5>
+                        <p class="preco-card">{{$produto->preco}}</p>
                         <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/tomate-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Tomate</h5>
-                        <p class="preco-card">R$ 2,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/banana-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Banana</h5>
-                        <p class="preco-card">R$ 0,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Alface</h5>
-                        <p class="preco-card">R$ 1,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/tomate-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Tomate</h5>
-                        <p class="preco-card">R$ 2,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/banana-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Banana</h5>
-                        <p class="preco-card">R$ 0,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Alface</h5>
-                        <p class="preco-card">R$ 1,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/tomate-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Tomate</h5>
-                        <p class="preco-card">R$ 2,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
-                    <img class="card-img-top" src="img/banana-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">Banana</h5>
-                        <p class="preco-card">R$ 0,99/kg</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+            
+           
         </section>
     </div>
 </div>
