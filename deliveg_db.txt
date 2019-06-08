@@ -23,6 +23,7 @@ CREATE TABLE produto(
     tag VARCHAR(65),
     descricao TEXT NOT NULL,
     foto VARCHAR(255) NOT NULL, 
+    preco FLOAT NOT NULL,
     estoque INT NOT NULL
 );
 
@@ -90,7 +91,6 @@ ADD FOREIGN KEY (status_cadastro) REFERENCES status_restaurante(id_status_restau
 INSERT INTO categoria (nome) VALUES ('legume');
 INSERT INTO categoria (nome) VALUES ('verdura');
 INSERT INTO categoria (nome) VALUES ('fruta');
-INSERT INTO categoria (nome) VALUES ('fruta');
 
 INSERT INTO status_pedido(nome) values('aguardando');
 INSERT INTO status_pedido(nome) values('aprovado');
@@ -104,3 +104,7 @@ INSERT INTO status_restaurante(status_do_restaurante) values('aguardando_aprovac
 
 INSERT INTO tipo_usuario(tipo_de_usuario) values('adm');
 INSERT INTO tipo_usuario(tipo_de_usuario) values('restaurante');
+
+INSERT into produto(id_categoria, nome, tag, descricao, foto, estoque) VALUES(3, 'maça', 'fruta', 'produto bacana e vermelho, mas pode ser verde tb', 'maça.png', 400);
+INSERT into produto(id_categoria, nome, tag, descricao, foto, estoque) VALUES(3, 'morango', 'fruta', 'produto bacana e vermelho', 'morango.png', 400);
+INSERT into produto(id_categoria, nome, tag, descricao, foto, estoque) VALUES(1, 'cebola', 'legume', 'produto bacana', 'cebola.png', 400);

@@ -33,6 +33,18 @@ body {
 }
 .card {
     margin: 1em 0;
+    cursor:pointer;
+}
+
+.card-body button {
+    padding: 5px 15px;
+    width: 100px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.card-body button:hover{
+    opacity: 0.8;
+    font-weight: bold;
 }
 
 .card:hover {
@@ -52,6 +64,40 @@ img.card-img-top {
 .list-group {
     margin: 1em;
 }
+
+
+#cart{
+    display:flex;
+    bottom: 0;
+    z-index: 99999;
+    justify-content: flex-end;
+    background-color:rgb(96, 184, 134);
+    padding: 1.5em;
+    width: 100vw;
+}
+.cart__content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 24em;
+}
+
+.cart__content p {
+    font-size: bold;
+    font-size: 40px;
+}
+
+
+
+ 
+  
+
+
+
+
+
+
+
 
 @media (max-width: 600px) {
     .card {
