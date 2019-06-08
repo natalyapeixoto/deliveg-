@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ config('app.name', 'Deliveg') }}</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
 <header  id="main-header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="/" title="Deliveg">
@@ -24,3 +35,12 @@
         </div>
     </nav>
 </header>
+    <body>
+         @yield('content')
+
+        <footer class="text-muted text-center text-small">
+            <p class="mb-1">© 2019 Deliveg</p>
+        </footer>
+        <script src='../js/app.js'></script>
+    </body>
+</html>

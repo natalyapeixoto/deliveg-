@@ -7,20 +7,25 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  display:none;
+}
 
 .form-container {
+  margin: 100px 5px 65px;
   display: flex;
-  width: 100vw;
-  height: 80vh;
   justify-content: center;
   align-items:center;
 }
 
 .form {
-  margin-top: 5em;
   background-color:white;
   padding: 4em;
   border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
 
 .form-cadastro{
@@ -61,19 +66,16 @@ input:focus{
 }
 
 #cadastro-btn, #login-btn {
-  width:100px;
+  width: 100%;
   display: block;
   margin-bottom: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
   background-color:#82AB4D; 
   outline: none;
   border:none;
 }
 
-@media (max-width:900px) {
-  #cadastro-btn {
-    width: 151px;
-  }
-}
 
 #cadastro-btn:hover, #login-btn:hover{
   background-color:#3E7054;
@@ -90,13 +92,12 @@ input:focus{
   color: black;
 }
 /*cadastro*/
-.cadastro-form-container{
-  display: none;
+/*.cadastro-form-container{
   margin-top: 55px; 
   height: 80vh;
   justify-content: center;
   align-items:center
-}
+}*/
 
 
 .cadastro-email-error,
@@ -111,4 +112,10 @@ input:focus{
 .cadastro__btn {
   display: flex;
   flex-direction: column;
+}
+
+.entrar-img {
+  width:100%;
+  max-width:80px;
+  padding: 0 0 50px 0;
 }
