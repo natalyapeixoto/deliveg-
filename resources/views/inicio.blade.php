@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deliveg | Página Inicial</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-</head>
+@extends('layouts.base')
 
-<body>
+@section('content')
 
-
-    @include('navbar')
-
-    <div class="container-fluid">
+    <div id="home" class="container-fluid">
         <section class="carrossel">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -31,28 +16,28 @@
                         <img class="d-block w-100 zoom" src="img/maca.jpg" alt="maça">
                         <div class="carousel-caption d-md-block">
                             <h5>Maçã</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100 zoom" src="img/cenoura.jpg" alt="cenoura">
                         <div class="carousel-caption d-md-block">
                             <h5>Cenoura</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100 zoom" src="img/alface.jpg" alt="alface">
                         <div class="carousel-caption d-md-block">
                             <h5>Alface</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100 zoom" src="img/pimentao.jpg" alt="pimentao">
                         <div class="carousel-caption d-md-block">
                             <h5>Pimentão</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -75,14 +60,11 @@
                 <h2 class="text-center text-uppercase">O que fazemos</h2>                
             </div>
             <div class="col-md-6 m-auto OqueFazemos-div">
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam
+                <p class="paragrafo-home text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam
                 reiciendis necessitatibus odio fuga aliquam.</p>
             </div>
         </div>
     </section>
-
-
-
     
     <section class="section section_QuemSomos card">
             <div class="container">
@@ -90,12 +72,12 @@
                     <div class="col-md-5"> 
                         <h2 class="text-uppercase center">Quem Somos</h2>
                         <div class="section_divp">
-                            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
+                            <p class="center paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
                             necessitatibus odio fuga aliquam.</p>
                         </div>
                     </div>
                     <div col="col-md-7 image-center">
-                            <img class="quem-somo__img" src="./img/deliveg1.png" alt="logo" >
+                        <img class="quem-somo__img" src="./img/deliveg1.png" alt="logo" >
                     </div>  
                 </div>
             </div>
@@ -109,7 +91,7 @@
                     <div class="col-md-5"> 
                         <h2 class="text-uppercase center">Raio de Entrega</h2>
                         <div class="section_divp">
-                            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
+                            <p class="center paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
                             necessitatibus odio fuga aliquam.</p>
                         </div>
                     </div>
@@ -123,12 +105,4 @@
     </section>
 
   
-
-    @include('footer')
-
-<script src='../js/app.js'></script>
-    
-
-</body>
-
-</html>
+@endsection

@@ -16,18 +16,18 @@
     padding: 0;
 }
 
-h2{
+#home h2{
     font-family: 'Fredoka One', cursive;
     font-size:2em;
 }
 
-p{
+p.paragrafo-home{
     font-family: 'Lato', sans-serif;
     font-size: 1.3em;
     padding-bottom: 10px;
 }
 
-.section{
+#home .section{
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -77,9 +77,6 @@ p{
 .section_raio{
     background-color: #82AB4D;
 }
-
-
-
 
 
 @media(max-width: 768px) {

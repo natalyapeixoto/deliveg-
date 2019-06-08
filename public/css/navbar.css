@@ -10,7 +10,7 @@
 
 .navbar {
     /*background-color: #82AB4D;*/
-    font-family: 'Fredoka One',cursive;
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
     font-weight: bold;
     margin:0;
@@ -40,5 +40,12 @@ a.link-green:hover {
 @media (max-width: 1024px) {
     .navbar-right {
         display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    ul li {
+        padding: 2%;
+        border-bottom: 1px solid #82AB4D;
     }
 }

@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('inicio');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/entrar', function () {
+    return view('entrar');
 });
 
 Route::get('/carrinho', function () {
@@ -34,12 +34,6 @@ Route::get('/cadastro', function() {
     return view('cadastro');
 });
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-;
 
 
 
