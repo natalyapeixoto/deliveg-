@@ -35,7 +35,10 @@
                     <div class="card-body">
                         <h5 class="nome-produto-card">{{ $produto->nome }}</h5>
                         <p class="preco-card">{{$produto->preco}}</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button>
+                        <!-- <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button> -->
+                        <button class="add" onclick="addItemToCart('{{ $produto->nome }}',{{$produto->preco}} )">adicionar</button>
+                        <input class="product-amount" type='text'>
+                        <button class="remove">remover</button>
                     </div>
                 </div>
             </div>
@@ -47,7 +50,7 @@
 </div>
 </div>
 
-<div id="modal-produto" class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<!-- <div id="modal-produto" class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -71,11 +74,16 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+<footer id='cart'>
+    <div class='cart__content'>
+      <p id='total'><span>R$</span>0,00</p>
+    </div>
+  </footer>
 
     <script src='../js/app.js'></script>
+    <script src='../js/loja.js'></script>
 
 
-   @include('footer')
 </body>
 </html>
