@@ -2,7 +2,8 @@
 @section('content')
 
 <div id="cadastro" class="form-container">
-    <form class="form" action='/home'>
+<form method="POST" action="{{ route('register') }}">
+@csrf        
         <img class="entrar-img " src="./img/deliveg1.png" alt="logo">
         <label for="nome" class="hidden">Nome</label>
         <input id="nome"class="form-control" type="text" name="nome" placeholder="Nome">
@@ -22,6 +23,5 @@
         <a href="/entrar" class="link-login">Já tem conta? Faça o seu login.</a> 
     </form> 
 </div>
-
             
 @endsection

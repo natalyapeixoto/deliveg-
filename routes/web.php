@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('inicio');
 });
 
-Route::get('/entrar', function () {
+Route::get('/entrar', function(){
     return view('entrar');
 });
+
+
 
 Route::get('/carrinho', function () {
     return view('carrinho');
@@ -26,17 +28,12 @@ Route::get('/carrinho', function () {
 Route::get('/loja',  'LojaController@mostrarProdutos');
 Route::get('/loja/{id_categoria}', 'LojaController@filtrarProdutosPorCategoria');
 
-Route::get('/perfil', function() {
-    return view('perfil');
-});
+Route::get('/perfil', 'PerfilController@mostrarPerfil');
 
 Route::get('/cadastro', function() {
     return view('cadastro');
 });
 
+Auth::routes();
 
-
-
-
-
-
+Route::get('/home', 'HomeController@index')->name('home');
