@@ -27,10 +27,10 @@
         </div>
     <div class="col-md-9 col-sm-12">
         <section id="produtos-wrapper" class="row">
-
+            <form action="">
             @foreach($produtos as $produto)
             <div class="col-md-4 col-sm-6 col-xs-1">
-                <div class="card">
+              <div class="card">
                     <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
                     <div class="card-body">
                         <h5 class="nome-produto-card">{{ $produto->nome }}</h5>
@@ -39,11 +39,21 @@
                         <button class="add" onclick="addItemToCart('{{ $produto->nome }}',{{$produto->preco}} )">adicionar</button>
                         <input class="product-amount" type='text'>
                         <button class="remove">remover</button>
+                        <input type="hidden" name="quantidade" value="0">
+                        <input type="hidden" name="id_produto" value="{{$produto->id_produto}}">
                     </div>
                 </div>
             </div>
             @endforeach
-            
+            <input type="hidden" name="usuario" value="{{ Auth::user()->id }}">
+            <button type="submit">comprar</button>
+            </form>
+
+            <!-- foreach $request-> as $valor
+            $idUser = $valor["usuario"];
+            $quantidade = $request["quantidade"];
+            $protudoId = $request["id_produto"]; -->
+
            
         </section>
     </div>
