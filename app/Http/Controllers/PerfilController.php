@@ -7,7 +7,20 @@ use App\Usuario;
 
 class PerfilController extends Controller
 {
-    public function mostrarPerfil (){
+    
+      /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
         
+    public function mostrarPerfil (){
+        $usuarios = Usuario::all();         
+        return view('perfil')->with('usuario', $usuarios);   
     }
 }
