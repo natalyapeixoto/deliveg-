@@ -8,6 +8,19 @@ use App\Produto;
 
 class LojaController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
     public function mostrarProdutos () {
         $categorias = Categoria::all();
         $produtos = Produto::all();
