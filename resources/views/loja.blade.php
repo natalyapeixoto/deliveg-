@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Deliveg | Loja</title>
 
     <link rel="stylesheet" href="../css/navbar.css">
@@ -18,43 +19,12 @@
 
 <div class="container" style="margin-top: 120px;">
     <div class="row">
-        <div class="col-md-3 col-sm-12">
-            <ul class="list-group">
-            @foreach( $categorias as $categoria )
-                <a href="/loja/{{$categoria->id_categoria}}"><li class="list-group-item list-group-item-action">{{ $categoria->nome }}</li></a>
-            @endforeach
-            </ul>
+        <div class="col-md-3 col-sm-12" id="categories">
+         
         </div>
     <div class="col-md-9 col-sm-12">
-        <section id="produtos-wrapper" class="row">
-            <form action="">
-            @foreach($produtos as $produto)
-            <div class="col-md-4 col-sm-6 col-xs-1">
-              <div class="card">
-                    <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
-                    <div class="card-body">
-                        <h5 class="nome-produto-card">{{ $produto->nome }}</h5>
-                        <p class="preco-card">{{$produto->preco}}</p>
-                        <!-- <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button> -->
-                        <button class="add" onclick="addItemToCart('{{ $produto->nome }}',{{$produto->preco}} )">adicionar</button>
-                        <input class="product-amount" type='text'>
-                        <button class="remove">remover</button>
-                        <input type="hidden" name="quantidade" value="0">
-                        <input type="hidden" name="id_produto" value="{{$produto->id_produto}}">
-                    </div>
-                </div>
-            </div>
-            @endforeach
-            <input type="hidden" name="usuario" value="{{ Auth::user()->id }}">
-            <button type="submit">comprar</button>
-            </form>
+        <section id="produtos-wrapper" class="row" >
 
-            <!-- foreach $request-> as $valor
-            $idUser = $valor["usuario"];
-            $quantidade = $request["quantidade"];
-            $protudoId = $request["id_produto"]; -->
-
-           
         </section>
     </div>
 </div>
@@ -85,9 +55,11 @@
     </div>
   </div>
 </div> -->
+@csrf
 <footer id='cart'>
+    <button class="btn btn-success" id="buy">Comprar</button>
     <div class='cart__content'>
-      <p id='total'><span>R$</span>0,00</p>
+    <h2>Valor Total R$</h2><p id='total'></p>
     </div>
   </footer>
 

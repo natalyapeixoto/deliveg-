@@ -21,6 +21,6 @@ class PerfilController extends Controller
         
     public function mostrarPerfil (){
         $usuarios = Usuario::all();         
-        return view('perfil')->with('usuario', $usuarios);   
+        return view('perfil')->with('usuarios', $usuarios);   
     }
 }
