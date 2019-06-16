@@ -58,22 +58,27 @@ function renderProducts(produtos) {
 
 
 const listaDeCompras = []
+
 function addItemToCart(id, preco, nome) {
   if(ITEMS[id]) { 
     ITEMS[id] = parseInt(ITEMS[id]) + parseInt(preco)
+    ITEMS[nome] +=1
   } else {
     ITEMS[id] = parseInt(preco)
+    ITEMS[nome] = 1
   }
 
  listaDeCompras.push(parseInt(preco))
  showTotal(listaDeCompras)
- console.log(ITEMS)
 }
 
 function removeItemFromCart(id, preco, nome) {
   if(!ITEMS[id]){return}
 
-  if(ITEMS[id]){ ITEMS[id] = parseInt(ITEMS[id]) - parseInt(preco)}
+  if(ITEMS[id]) { 
+    ITEMS[id] = parseInt(ITEMS[id]) - parseInt(preco)
+    ITEMS[nome] -=1
+  }
 
   listaDeCompras.push(-preco)
   showTotal(listaDeCompras)
@@ -81,29 +86,26 @@ function removeItemFromCart(id, preco, nome) {
 }
 
 function showTotal(listaDeCompras) {
-  const total = listaDeCompras.reduce((item, t)=>{
+ TOTALDACOMPRA = listaDeCompras.reduce((item, t)=>{
     if(item+t <0 || item+t == NaN) return 0.00
     return item+t
   })
 
-  document.getElementById('total').textContent = total.toFixed(2).replace('.', ',')
+  document.getElementById('total').textContent = TOTALDACOMPRA.toFixed(2).replace('.', ',')
+  document.getElementById('precoFinal').innerHTML = `<p class="preco-card">R$ ${parseInt(TOTALDACOMPRA).toFixed(2).replace('.', ',')}</p>`
 }
 
 
 
 
 var ITEMS = {}
+var TOTALDACOMPRA = 0
 
 
-
-const buyButton =  document.getElementById('buy');
+const buyButton = document.getElementById('buy');
 buyButton.addEventListener('click', sendItemstoBill)
+
 function sendItemstoBill() {
-  var TOTALDACOMPRA =0;
-  for(const item in ITEMS) {
-    TOTALDACOMPRA += ITEMS[item]
-    console.log(TOTALDACOMPRA)
-  }
 
 $.ajaxSetup({
   headers: {
@@ -122,19 +124,20 @@ $.ajaxSetup({
 
 
 function renderModal(res) {
+
   const ids = res.items.match(/"\d"/g).join('')
-  console.log(res.total)
+  document.getElementById('modal').innerHTML =''
  prod.forEach(item => {
   if(ids.includes(item.id_produto)) {
-    console.log(item)
+    
+   let value = ITEMS[item.nome]
+   if(!value){return}
   document.getElementById('modal').innerHTML += `
         
-          <p class="descricao-card" > ${item.nome} - ${item.descricao}</p>
+    <p class="descricao-card" > ${value} x ${item.nome} - ${item.descricao}  - valor do item R$ ${item.preco.toFixed(2).replace('.', ',')}</p>
           
     `
-    
-    
-}
+}   
 })
-document.getElementById('precoFinal').innerHTML = `<p class="preco-card">R$ ${parseInt(res.total).toFixed(2).replace('.', ',')}</p>`
+
 }
