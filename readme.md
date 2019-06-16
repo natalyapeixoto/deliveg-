@@ -1,4 +1,4 @@
-##deliveg
+## deliveg (mvp)
 
 ### para rodar o projeto
 * git clone url-do-projeto
