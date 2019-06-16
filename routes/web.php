@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
+
 
 Route::get('/', function () {
     return view('inicio');
@@ -37,3 +39,9 @@ Route::get('/cadastro', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('produtos', 'ProdutoController@getProdutos');
+
+Route::post('pedidos', 'PedidoController@setNewPedido');

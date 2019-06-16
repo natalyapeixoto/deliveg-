@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Categoria;
 use App\Produto;
+use App\Http\Requests;
+
 
 class LojaController extends Controller
 {
@@ -18,9 +20,7 @@ class LojaController extends Controller
     {
         $this->middleware('auth');
     }
-
-
-
+    
     public function mostrarProdutos () {
         $categorias = Categoria::all();
         $produtos = Produto::all();
@@ -32,4 +32,7 @@ class LojaController extends Controller
         $categorias = Categoria::all();
         return view('loja')->with('produtos', $produtos)->with('categorias', $categorias);
     }
+
+
+
  }
