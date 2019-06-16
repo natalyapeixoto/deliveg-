@@ -1,6 +1,7 @@
 getProducts()
 renderCategories()
 let prod = [];
+
 function  getProducts () {
   return fetch('http://localhost:8000/produtos')
     .then(res => res.json())
@@ -14,7 +15,6 @@ function  getProducts () {
 function renderCategories() {
   const categorias = ['Legumes', 'Verduras', 'Frutas', 'Todos']
   categorias.forEach((categoria, index) => {
-    console.log(categoria, index)
     document.getElementById('categories').innerHTML +=`
     <ul class="list-group">
           <a onclick="filterByCategory('${index+1}')"><li class="list-group-item list-group-item-action">${categoria}</li></a>
@@ -24,11 +24,9 @@ function renderCategories() {
 }
 
 function filterByCategory(index) {
-  console.log(index)
-  if(index == 4) {
-    return  renderProducts(prod)
-  }
- var filter =  prod.filter(item => {
+  if(index == 4) return  renderProducts(prod) 
+  
+  const filter =  prod.filter(item => {
     if(index == item.id_categoria) {
       return item 
     }
@@ -38,7 +36,9 @@ function filterByCategory(index) {
 
 function renderProducts(produtos) {
   document.getElementById('produtos-wrapper').innerHTML = ''
+
     if (produtos <= 0) return document.getElementById('produtos-wrapper').innerHTML = 'nenhum produto nesta categoria'
+    
     produtos.forEach(produto => {
       document.getElementById('produtos-wrapper').innerHTML += `
       <div class="col-md-4 col-sm-6 col-xs-1" >
@@ -46,10 +46,10 @@ function renderProducts(produtos) {
       <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
       <div class="card-body">
           <h5 class="nome-produto-card" id="produto-nome">${produto.nome}</h5>
-          <p class="preco-card" id="produto-preco">${produto.preco}</p>
+          <p class="preco-card" id="produto-preco">R$ ${produto.preco.toFixed(2).replace('.', ',')} /kg</p>
           <!-- <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button> -->
-          <button class="add" onclick="addItemToCart('${produto.id_produto}','${produto.preco}')">adicionar</button>
-          <button class="remove" onclick="removeItemFromCart('${produto.preco}')">remover</button>
+          <button class="add" onclick="addItemToCart('${produto.id_produto}','${produto.preco}', '${produto.nome}')">adicionar</button>
+          <button class="remove" onclick="removeItemFromCart('${produto.id_produto}','${produto.preco}', '${produto.nome}')">remover</button>
       </div>
      </div>
      </div>` 
@@ -57,35 +57,53 @@ function renderProducts(produtos) {
 }
 
 
-const lista = []
-function addItemToCart(id, preco) {
-  ITEMS.push(id)
- lista.push(parseInt(preco))
- showTotal(lista)
+const listaDeCompras = []
+function addItemToCart(id, preco, nome) {
+  if(ITEMS[id]) { 
+    ITEMS[id] = parseInt(ITEMS[id]) + parseInt(preco)
+  } else {
+    ITEMS[id] = parseInt(preco)
+  }
+
+ listaDeCompras.push(parseInt(preco))
+ showTotal(listaDeCompras)
+ console.log(ITEMS)
 }
 
-function removeItemFromCart(preco) {
-  lista.push(-preco)
-  showTotal(lista)
+function removeItemFromCart(id, preco, nome) {
+  if(!ITEMS[id]){return}
+
+  if(ITEMS[id]){ ITEMS[id] = parseInt(ITEMS[id]) - parseInt(preco)}
+
+  listaDeCompras.push(-preco)
+  showTotal(listaDeCompras)
+  return  console.log(ITEMS)
 }
 
-function showTotal(lista) {
-  const total = lista.reduce((item, t)=>{
+function showTotal(listaDeCompras) {
+  const total = listaDeCompras.reduce((item, t)=>{
     if(item+t <0 || item+t == NaN) return 0.00
     return item+t
   })
-  TOTALDACOMPRA = total
+
   document.getElementById('total').textContent = total.toFixed(2).replace('.', ',')
 }
 
+
+
+
+var ITEMS = {}
+
+
+
 const buyButton =  document.getElementById('buy');
-var TOTALDACOMPRA;
-var ITEMS =[];
-
-
 buyButton.addEventListener('click', sendItemstoBill)
 function sendItemstoBill() {
-  console.log('oi')
+  var TOTALDACOMPRA =0;
+  for(const item in ITEMS) {
+    TOTALDACOMPRA += ITEMS[item]
+    console.log(TOTALDACOMPRA)
+  }
 
 $.ajaxSetup({
   headers: {
@@ -96,9 +114,27 @@ $.ajaxSetup({
     url: 'http://localhost:8000/pedidos',
 })
 
-return $.ajax({
-    data: {items:'ITEMS',total:10},
-}).then(res => console.log(res))
-  
+  return $.ajax({
+      data: {items:JSON.stringify(ITEMS),total:TOTALDACOMPRA},
+  }).then(res => renderModal(res))
 
+}
+
+
+function renderModal(res) {
+  const ids = res.items.match(/"\d"/g).join('')
+  console.log(res.total)
+ prod.forEach(item => {
+  if(ids.includes(item.id_produto)) {
+    console.log(item)
+  document.getElementById('modal').innerHTML += `
+        
+          <p class="descricao-card" > ${item.nome} - ${item.descricao}</p>
+          
+    `
+    
+    
+}
+})
+document.getElementById('precoFinal').innerHTML = `<p class="preco-card">R$ ${parseInt(res.total).toFixed(2).replace('.', ',')}</p>`
 }

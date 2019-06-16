@@ -30,34 +30,37 @@
 </div>
 </div>
 
-<!-- <div id="modal-produto" class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="modal-produto" class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Banana</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    <div class="modal-content" >
+    <div class="modal-header">
+     <h5 class="modal-title" id="exampleModalLongTitle">Finalizar Compra</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row" >
+      <div class="col-md-8 col-sm-12">
+          <h5 class="nome-produto-card">Itens Selecionados:</h5>
+          <div id='modal'>
+
+          
+          
+          
       </div>
-      <div class="modal-body">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <img class="card-img-top" src="img/banana-1.jpg" alt="Imagem do Produto">
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <h5 class="nome-produto-card">Banana</h5>
-                <p class="descricao-card">É a fruta mais popular do Brasil e um dos símbolos de países tropicais, a banana prata é também chamada de banana anã grande. </p>
-                <p class="preco-card">R$ 0,99/kg</p>
-                <button type="button" class="btn btn-success">Adicionar</button>
-            </div>
+      <p id="precoFinal"></p> 
+      <button type="button" class="btn btn-success">Finalizar Compra</button>
+      </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 @csrf
 <footer id='cart'>
-    <button class="btn btn-success" id="buy">Comprar</button>
+
+    <button  class="btn btn-success" data-toggle="modal" data-target="#modal-produto" id="buy">Comprar</button>
     <div class='cart__content'>
     <h2>Valor Total R$</h2><p id='total'></p>
     </div>
