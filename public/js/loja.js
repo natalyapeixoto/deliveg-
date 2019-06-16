@@ -12,7 +12,7 @@ function  getProducts () {
 }
 
 function renderCategories() {
-  const categorias = ['Legumes', 'Verduras', 'Frutas']
+  const categorias = ['Legumes', 'Verduras', 'Frutas', 'Todos']
   categorias.forEach((categoria, index) => {
     console.log(categoria, index)
     document.getElementById('categories').innerHTML +=`
@@ -24,6 +24,10 @@ function renderCategories() {
 }
 
 function filterByCategory(index) {
+  console.log(index)
+  if(index == 4) {
+    return  renderProducts(prod)
+  }
  var filter =  prod.filter(item => {
     if(index == item.id_categoria) {
       return item 
@@ -94,7 +98,7 @@ $.ajaxSetup({
 
 return $.ajax({
     data: {items:'ITEMS',total:10},
-})
+}).then(res => console.log(res))
   
 
 }
