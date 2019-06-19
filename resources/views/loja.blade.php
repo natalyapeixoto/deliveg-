@@ -60,7 +60,7 @@
 @csrf
 <footer id='cart'>
 
-    <button  class="btn btn-success" data-toggle="modal" data-target="#modal-produto" id="buy">Comprar</button>
+    <button  class="btn btn-continuar" data-toggle="modal" data-target="#modal-produto" id="buy">Prosseguir Pedido</button>
     <div class='cart__content'>
     <h2>Valor Total R$</h2><p id='total'></p>
     </div>

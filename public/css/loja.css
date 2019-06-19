@@ -41,6 +41,9 @@ body {
     width: 100px;
     border-radius: 5px;
     cursor:pointer;
+    color:white;
+    background: #38c172;
+    border: 0;
 }
 .card-body button:hover{
     opacity: 0.8;
@@ -87,15 +90,53 @@ img.card-img-top {
     font-size: 40px;
 }
 
+.list-group-item:last-child:hover {
+    background: #38c172;
+    color: white;
+    
+}
 
-
+.preco-card{
+    color: gray;
+    font-size: 16px;
+}
  
-  
+
+.cart__content h2{
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.cart__content p{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding-top: 16px;
+    padding-right: 110px;
+    padding-left: 10px;
+}
 
 
+footer#cart{
+    height: 60px;
+    width: 100%;
+    position: fixed;
+}
 
+.cart__content{
+    width: auto;
+}
 
+.btn-continuar{
+    background: white;
+    color: #38c172;
+    font-weight: bold !important;
+}
 
+.btn-continuar:hover{
+    color: #ffad29;
 
 
 

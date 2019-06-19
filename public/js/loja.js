@@ -126,6 +126,7 @@ $.ajaxSetup({
 function renderModal(res) {
 
   const ids = res.items.match(/"\d"/g).join('')
+  console.log(ids)
   document.getElementById('modal').innerHTML =''
  prod.forEach(item => {
   if(ids.includes(item.id_produto)) {
