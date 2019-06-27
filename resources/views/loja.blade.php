@@ -50,7 +50,7 @@
           
       </div>
       <p id="precoFinal"></p> 
-      <button type="button" class="btn btn-success">Finalizar Compra</button>
+      <button type="button" class="btn btn-success" >Finalizar Compra</button>
       </div>
         </div>
       </div>
