@@ -3,6 +3,7 @@ renderCategories()
 let prod = [];
 
 function  getProducts () {
+
   return fetch('http://localhost:8000/produtos')
     .then(res => res.json())
     .then(res =>{
@@ -42,16 +43,16 @@ function renderProducts(produtos) {
     produtos.forEach(produto => {
       document.getElementById('produtos-wrapper').innerHTML += `
       <div class="col-md-4 col-sm-6 col-xs-1" >
-      <div class="card">
-      <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
-      <div class="card-body">
-          <h5 class="nome-produto-card" id="produto-nome">${produto.nome}</h5>
-          <p class="preco-card" id="produto-preco">R$ ${produto.preco.toFixed(2).replace('.', ',')} /kg</p>
-          <!-- <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button> -->
-          <button class="add" onclick="addItemToCart('${produto.id_produto}','${produto.preco}', '${produto.nome}')">adicionar</button>
-          <button class="remove" onclick="removeItemFromCart('${produto.id_produto}','${produto.preco}', '${produto.nome}')">remover</button>
-      </div>
-     </div>
+        <div class="card">
+          <img class="card-img-top" src="img/alface-1.jpg" alt="Imagem do Produto">
+          <div class="card-body">
+              <h5 class="nome-produto-card" id="produto-nome">${produto.nome}</h5>
+              <p class="preco-card" id="produto-preco">R$ ${produto.preco.toFixed(2).replace('.', ',')} /kg</p>
+              <!-- <button class="btn btn-success" data-toggle="modal" data-target="#modal-produto">Comprar</button> -->
+              <button class="add" onclick="addItemToCart('${produto.id_produto}','${produto.preco}', '${produto.nome}')">adicionar</button>
+              <button class="remove" onclick="removeItemFromCart('${produto.id_produto}','${produto.preco}', '${produto.nome}')">remover</button>
+          </div>
+        </div>
      </div>` 
     })
 }
@@ -59,13 +60,18 @@ function renderProducts(produtos) {
 
 const listaDeCompras = []
 
+let counter = 0
 function addItemToCart(id, preco, nome) {
+  
   if(ITEMS[id]) { 
+    localStorage.setItem(nome, ++counter)
     ITEMS[id] = parseInt(ITEMS[id]) + parseInt(preco)
     ITEMS[nome] +=1
   } else {
+    counter = 1
     ITEMS[id] = parseInt(preco)
     ITEMS[nome] = 1
+    localStorage.setItem(nome, counter)
   }
 
  listaDeCompras.push(parseInt(preco))
@@ -78,6 +84,7 @@ function removeItemFromCart(id, preco, nome) {
   if(ITEMS[id]) { 
     ITEMS[id] = parseInt(ITEMS[id]) - parseInt(preco)
     ITEMS[nome] -=1
+    localStorage.setItem(nome, --counter)
   }
 
   listaDeCompras.push(-preco)
@@ -86,7 +93,7 @@ function removeItemFromCart(id, preco, nome) {
 }
 
 function showTotal(listaDeCompras) {
- TOTALDACOMPRA = listaDeCompras.reduce((item, t)=>{
+ TOTALDACOMPRA = listaDeCompras.reduce((item, t)=> {
     if(item+t <0 || item+t == NaN) return 0.00
     return item+t
   })
@@ -103,9 +110,10 @@ var TOTALDACOMPRA = 0
 
 
 const buyButton = document.getElementById('buy');
-buyButton.addEventListener('click', sendItemstoBill)
+buyButton.addEventListener('click', renderModal)
 
 function sendItemstoBill() {
+  
 
 $.ajaxSetup({
   headers: {
@@ -118,27 +126,23 @@ $.ajaxSetup({
 
   return $.ajax({
       data: {items:JSON.stringify(ITEMS),total:TOTALDACOMPRA},
-  }).then(res => renderModal(res))
+  }).then(res => res)
 
 }
 
 
-function renderModal(res) {
+function renderModal() {
+  document.getElementById('modal').innerHTML  =''
+      for (var key in localStorage) {
+        if (localStorage.hasOwnProperty(key)) {
+            console.log(key);
+            document.getElementById('modal').innerHTML += `
+                  
+              <p class="descricao-card" > ${localStorage[key]} x ${key}</p>
+                    `
+        }
+        if(!key){return}
+      }
 
-  const ids = res.items.match(/"\d"/g).join('')
-  console.log(ids)
-  document.getElementById('modal').innerHTML =''
- prod.forEach(item => {
-  if(ids.includes(item.id_produto)) {
     
-   let value = ITEMS[item.nome]
-   if(!value){return}
-  document.getElementById('modal').innerHTML += `
-        
-    <p class="descricao-card" > ${value} x ${item.nome} - ${item.descricao}  - valor do item R$ ${item.preco.toFixed(2).replace('.', ',')}</p>
-          
-    `
 }   
-})
-
-}
