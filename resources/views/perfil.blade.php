@@ -8,8 +8,11 @@
       <h1 class="display-4"> Bem-vinda(o) { {{$usuario->name}} }</h1>
       <hr class="my-4">
       <h3 class="my-3">Dados Cadastrais</h3>
-      <p class="cadastro__cnpj"><strong>email</strong>: {{$usuario->email}}</p>
+      <p class="cadastro__cnpj"><strong>Email</strong>: {{$usuario->email}}</p>
       <p class="cadastro__endereço"><strong>Endereço</strong>: {{$usuario->rua}}, {{$usuario->numero}}</p>
+      <p class="cadastro__endereço"><strong>Cidade:</strong> {{$usuario->cidade}}</p>
+      <p class="cadastro__endereço"> <strong>Estado:</strong> {{$usuario->estado}}</p>
+      <p class="cadastro__cnpj"><strong>CPF</strong>: {{$usuario->documento}}</p>
       <hr class="my-4">
       @endforeach
 
@@ -29,7 +32,11 @@
           <tr>
             <th scope="row">{{$pedido->id_pedido}}</th>
             <td>
-              {{ $pedido->items }}
+            <?php
+
+            $newString = preg_replace('/[^a-zç]/i', ' ', $pedido->items);
+              echo $newString
+              ?>
             </td>
             <td>
               R${{ $pedido->total }},00
