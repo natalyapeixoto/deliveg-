@@ -14,6 +14,7 @@ function  getProducts () {
 
 function renderCategories() {
   const categorias = ['Legumes', 'Verduras', 'Frutas', 'Todos']
+
   categorias.forEach((categoria, index) => {
     document.getElementById('categories').innerHTML +=`
     <ul class="list-group">
@@ -115,7 +116,7 @@ function showTotal(listaDeCompras) {
    return document.getElementById('total').innerHTML = `<p class="preco-card">R$ 0,00</p>`
   }
 
-  TOTALDACOMPRA = listaDeCompras.reduce((item, t)=> {
+  TOTALDACOMPRA = listaDeCompras.reduce((item, t) => {
     if(item + t < 0 || item + t == NaN) return 0.00
     return item + t
   })
