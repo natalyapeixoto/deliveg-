@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ config('app.name', 'Deliveg') }}</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="{{ url('../css/style.css') }}">
 </head>
 <body>
 
