@@ -7,10 +7,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Deliveg | Loja</title>
 
-    <link rel="stylesheet" href="{{ url('../css/navbar.css')}}">
-    <link rel="stylesheet" href="{{ url('../css/loja.css')}}">
-    <link rel="stylesheet" href="{{ url('../css/footer.css')}}">
-    <link rel="stylesheet" href="{{ url('../css/app.css')}}">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/loja.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/app.css">
     
 </head>
 <body>
@@ -66,8 +66,8 @@
     </div>
   </footer>
 
-    <script src='../js/app.js'></script>
-    <script src='../js/loja.js'></script>
+    <script src='/js/app.js'></script>
+    <script src='/js/loja.js'></script>
 
 
 </body>
