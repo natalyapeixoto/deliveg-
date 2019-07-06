@@ -21,6 +21,7 @@ class CreatePedidosTable extends Migration
             $table->string('items_id');
             $table->float('total');
             $table->string('status');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
