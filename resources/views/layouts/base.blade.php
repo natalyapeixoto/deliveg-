@@ -7,6 +7,12 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ config('app.name', 'Deliveg') }}</title>
   <link rel="stylesheet" href="{{ secure_asset('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('assets/css/loja.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('assets/css/carrinho.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('assets/css/pagamento.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('assets/css/perfil.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('assets/css/login.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('assets/css/cadastro.css') }}">
 </head>
 <body>
 
