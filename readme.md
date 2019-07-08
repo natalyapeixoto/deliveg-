@@ -16,3 +16,7 @@
 * git pull origin master
 * git push origin nome-da-sua-branch
 * entra no repositório NO GITHUB e faz a pull request.
+
+
+## Link Heroku
+ http://deliveg.herokuapp.com/
