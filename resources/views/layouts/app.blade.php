@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ config('app.name', 'Deliveg') }}</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/loja.css">
+  <link rel="stylesheet" href="../css/pagamento.css">
+  
 </head>
 <body>
 
@@ -41,10 +44,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item link-green" href="/perfil">perfil</a>
                                     <a class="dropdown-item link-green" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('logout') }}
+                                        @csrf
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
