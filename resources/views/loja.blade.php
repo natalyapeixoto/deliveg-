@@ -5,7 +5,7 @@
 <div class="container" style="margin-top: 120px;">
     <div class="row">
         <div class="col-md-3 col-sm-12" id="categories">
-         
+          
         </div>
     <div class="col-md-9 col-sm-12">
         <section id="produtos-wrapper" class="row" >
@@ -42,16 +42,15 @@
     </div>
   </div>
 </div>
-@csrf
-<footer id='cart'>
+
+<div id='cart'>
 
     <button  class="btn btn-continuar" data-toggle="modal" data-target="#modal-produto" id="buy">Ver carrinho</button>
     <div class='cart__content'>
     <h2>Valor Total R$</h2><p id='total'></p>
     </div>
-  </footer>
+  </div>
 
-    <script src='/js/app.js'></script>
-    <script src='/js/loja.js'></script>
+
 
 @endsection
