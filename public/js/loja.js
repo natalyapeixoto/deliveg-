@@ -4,7 +4,7 @@ showTotal(0)
 let prod = [];
 
 function  getProducts () {
-  return fetch('http://deliveg.herokuapp/produtos')
+  return fetch('http://deliveg.herokuapp.com/produtos')
     .then(res => res.json())
     .then(res =>{
       prod = res
