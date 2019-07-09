@@ -43,15 +43,14 @@
   </div>
 </div>
 @csrf
-<div id='cart'>
+<footer id='cart'>
 
     <button  class="btn btn-continuar" data-toggle="modal" data-target="#modal-produto" id="buy">Ver carrinho</button>
     <div class='cart__content'>
     <h2>Valor Total R$</h2><p id='total'></p>
     </div>
-  </div>
+  </footer>
 
+    <script src='/js/app.js'></script>
+    <script src='/js/loja.js'></script>
 
-</body>
-</html>
-@endsection
