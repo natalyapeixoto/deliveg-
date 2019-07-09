@@ -62,5 +62,10 @@
             <p class="mb-1">© 2019 Deliveg</p>
         </footer>
         <script src='/js/app.js'></script>
+        <script src='/js/bootstrap.js'></script>
+        <script src='/js/loja.js'></script>
+        <script src='/js/pagamento.js'></script>
+        <script src='/js/register.js'></script>
+  
     </body>
 </html>

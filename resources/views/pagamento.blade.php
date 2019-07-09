@@ -54,6 +54,4 @@
     </div>
 </div>
 
-  <script src='../js/app.js'></script>
-  <script src='../js/pagamento.js'></script>
 @endsection
