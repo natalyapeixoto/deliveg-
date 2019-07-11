@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -78,12 +79,10 @@ img.card-img-top {
 
 #cart{
     display:flex;
-    bottom: 0;
-    z-index: 99999;
     justify-content: flex-end;
+    align-items: center;
     background-color:rgb(96, 184, 134);
-    padding: 1.5em;
-    width: 100vw;
+    width: 100%;
 }
 .cart__content{
     display: flex;
@@ -100,23 +99,23 @@ img.card-img-top {
 .list-group-item:last-child:hover {
     background: #38c172;
     color: white;
-    
+
 }
 
-.preco-card{
+.preco-card {
     color: gray;
     font-size: 16px;
 }
- 
 
-.cart__content h2{
+
+.cart__content h2 {
     font-size: 20px;
     color: white;
     padding-top: 10px;
     padding-left: 20px;
 }
 
-.cart__content p{
+.cart__content p {
     font-size: 22px;
     font-weight: bold;
     color: white;
@@ -126,23 +125,18 @@ img.card-img-top {
 }
 
 
-footer#cart{
-    height: 60px;
-    width: 100%;
-    position: fixed;
-}
-
-.cart__content{
+.cart__content {
     width: auto;
 }
 
-.btn-continuar{
+.btn-continuar {
     background: white;
     color: #38c172;
     font-weight: bold !important;
+    height: 40px;
 }
 
-.btn-continuar:hover{
+.btn-continuar:hover {
     color: #ffad29;
 }
 

@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ config('app.name', 'Deliveg') }}</title>
+  <title>Deliveg</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/loja.css">
   <link rel="stylesheet" href="../css/pagamento.css">
-  
+
 </head>
 <body>
 
@@ -68,7 +68,7 @@
         <footer class="text-muted text-center text-small">
             <p class="mb-1">© 2019 Deliveg</p>
         </footer>
-        
+
         <script src='../js/app.js'></script>
     </body>
 </html>
