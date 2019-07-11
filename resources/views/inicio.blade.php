@@ -56,7 +56,7 @@
     <section class="section section_oQueFazemos">
         <div class="container">
             <div class="section_div">
-                <h2 class="text-center text-uppercase">O que fazemos</h2>                
+                <h2 class="text-center text-uppercase">O que fazemos</h2>
             </div>
             <div class="col-md-6 m-auto OqueFazemos-div">
                 <p class="paragrafo-home text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam
@@ -64,11 +64,11 @@
             </div>
         </div>
     </section>
-    
-    <section class="section section_QuemSomos card">
+
+    <section class="section section_QuemSomos">
             <div class="container">
                 <div class="row section_div">
-                    <div class="col-md-5"> 
+                    <div class="col-md-5">
                         <h2 class="text-uppercase center">Quem Somos</h2>
                         <div class="section_divp">
                             <p class="center paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
@@ -77,7 +77,7 @@
                     </div>
                     <div col="col-md-7 image-center">
                         <img class="quem-somo__img" src="./img/deliveg1.png" alt="logo" >
-                    </div>  
+                    </div>
                 </div>
             </div>
     </section>
@@ -87,7 +87,7 @@
     <section class="section section_raio">
             <div class="container">
                 <div class="row section_div">
-                    <div class="col-md-5"> 
+                    <div class="col-md-5">
                         <h2 class="text-uppercase center">Raio de Entrega</h2>
                         <div class="section_divp">
                             <p class="center paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
@@ -98,10 +98,10 @@
                         <iframe
                         src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14631.013926704016!2d-46.65606015!3d-23.541367349999998!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1554198050307!5m2!1spt-BR!2sbr"
                         width="375" height="218" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>  
+                    </div>
                 </div>
             </div>
     </section>
 
-  
+
 @endsection
