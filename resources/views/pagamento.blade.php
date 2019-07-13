@@ -12,6 +12,8 @@
                     </h3>
                 </div>
                 
+                <h3 id="quant"></h3>
+                
                 <div class="panel-body">
                     <form role="form">
                     <div class="form-group">
@@ -46,7 +48,6 @@
                 </div>
             </div>
            
-            <p id="quant"></p>
       
             <br/>
             <button class="btn btn-success" id="pagar">Pagar</button>
