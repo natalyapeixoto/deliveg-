@@ -33,7 +33,7 @@ class PedidoController extends Controller
        
         $pedidos->save();
 
-        return view('pagamento')
+        return view('pagamento');
         
 
 
