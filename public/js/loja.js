@@ -159,6 +159,7 @@ function sendItemstoBill() {
    const input = document.getElementById('sendToDb')
    input.style.display = 'none'
   input.value = JSON.stringify(data)
+  console.log(input.value)
 
   localStorage.clear()
 }
