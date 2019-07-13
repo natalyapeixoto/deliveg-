@@ -16,7 +16,7 @@ name.onblur = () => {
     if(typeof erroNome !== 'undefined'){
         erroNome.innerHTML = ' '
     }
-    if(name.value.length <= 5 || name.value.length >= 10 || name.value == '' ){
+    if(name.value == '' ){
         erroNome = document.createElement('p')
         erroNome.setAttribute('style', 'color:red;')
         name.setAttribute('style', 'border-color:red;')                              

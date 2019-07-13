@@ -25,10 +25,10 @@
         </button>
 
         <div id="navbarSupportedContent" class="navbar-right collapse navbar-collapse">
-            <ul class="navbar-nav" >
+            <ul class="navbar-nav nav-mobile" >
                 @guest
                             <li class="nav-item navbar-notlogged">
-                                <a class="link-green" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                <a class="link-green borda-mobile" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item navbar-notlogged">
