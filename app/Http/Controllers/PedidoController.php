@@ -17,7 +17,7 @@ class PedidoController extends Controller
         echo '<br>';
         var_dump($arrayPedido[item]);
         echo '<br>';
-        var_dump($arrayPedido->item)  
+        var_dump($arrayPedido->item);  
 
 
         // {"items":"{\"30\":3,\"Pimentão Vermelho\":1}",
