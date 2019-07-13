@@ -26,4 +26,6 @@ function pagar() {
    }).done(function(data) {
      console.log(data);
  })
+
+ window.location="/sucesso"
 }

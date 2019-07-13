@@ -12,15 +12,12 @@
                         Pagamento
                     </h3>
                 </div>
-                
-
                 <div class="panel-body">
-                    <form role="form">
+                <form role="form">
                     <div class="form-group">
-                        <label for="cardNumber">
-                            Cartão</label>
+                        <label for="cardNumber">Cartão</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão"
+                            <input type="tel" class="form-control" minlength='16' id="cardNumber" placeholder="Número do Cartão"
                                 required autofocus />
                         </div>
                     </div>
@@ -40,10 +37,10 @@
                             <div class="form-group">
                                 <label for="cvCode">
                                     CV</label>
-                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                <input type="password" minlength='3' class="form-control" id="cvCode" placeholder="CV" required />
                             </div>
                         </div>
-                    </div>
+                      </div>
                     </form>
                 </div>
             </div>
