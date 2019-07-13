@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/loja.css">
   <link rel="stylesheet" href="../css/pagamento.css">
+  <link rel="stylesheet" href="../css/sucesso.css">
 
 </head>
 <body>
@@ -72,9 +73,9 @@
           <div class="col-4 conhecaFooter">
             <h5>Conheça</h5>
             <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Entrar</a></li>
-              <li><a class="text-muted" href="#">Cadastrar</a></li>
-              <li><a class="text-muted" href="#">Quem Somos</a></li>
+            <li><a class="text-muted" href="/entrar">Entrar</a></li>
+              <li><a class="text-muted" href="/cadastro">Cadastrar</a></li>
+              <li><a class="text-muted" href="/#quemSomos">Quem Somos</a></li>
             </ul>
           </div> 
 

@@ -45,6 +45,10 @@
   </div>
 </div>
 
+<div>
+{{ $produtos->links() }}
+</div>
+
 <div id='cart'>
 
     <button  class="btn btn-continuar" data-toggle="modal" data-target="#modal-produto" id="buy">Ver carrinho</button>

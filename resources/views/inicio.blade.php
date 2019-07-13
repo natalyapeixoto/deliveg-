@@ -65,7 +65,7 @@
         </div>
     </section>
 
-    <section class="section section_QuemSomos">
+    <section id="quemSomos" class="section section_QuemSomos">
             <div class="container">
                 <div class="row section_div">
                     <div class="col-md-5">
