@@ -156,10 +156,13 @@ function sendItemstoBill() {
     },
     type: 'POST',
     dataType: 'json',
-    url: 'http://localhost/pedidos',
+    url: 'http://deliveg.heroku/pedidos',
   })
   
   $.ajax({
+    type: 'POST',
+    dataType: 'json',
+    url: 'http://deliveg.heroku/pedidos',
     data: {
       items:JSON.stringify(ITEMS),
       items_id: JSON.stringify(IDS), 
