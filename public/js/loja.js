@@ -157,12 +157,11 @@ function sendItemstoBill() {
     },
     type: 'POST',
     dataType: 'json',
-    url: 'http://deliveg.heroku/pedidos',
+    url: 'http://deliveg.herokuapp/pedidos',
   })
   console.log('passei por aqui caralho')
 
   $.ajax({
-    url: 'http://deliveg.heroku/pedidos',
     data: {
       items:JSON.stringify(ITEMS),
       items_id: JSON.stringify(IDS), 
