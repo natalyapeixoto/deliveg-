@@ -33,7 +33,7 @@ class PedidoController extends Controller
         
         // $pedidos->save();
         
-        return response()->json($pedidos,201);
+        // return response()->json($pedidos,201);
 
     }
 
