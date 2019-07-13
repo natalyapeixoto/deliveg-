@@ -15,8 +15,6 @@ class PedidoController extends Controller
 
         var_dump($arrayPedido);  
         echo '<br>';
-        var_dump($arrayPedido[items]);
-        echo '<br>';
         var_dump($arrayPedido->items);  
 
 
