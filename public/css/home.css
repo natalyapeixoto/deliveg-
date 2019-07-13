@@ -20,7 +20,9 @@
     font-family: 'Fredoka One', cursive;
     font-size:2em;
 }
-
+section#carrossel div {
+    height: 100vh;
+}
 p.paragrafo-home{
     font-family: 'Lato', sans-serif;
     font-size: 1.3em;
@@ -95,12 +97,99 @@ p.paragrafo-home{
 
     }
 
-    .carousel-item{
-        height: 198px;;
-    }
 
     .carrossel {
         margin-top: 65px;
     }
+
+    
+
+}
+
+.textoHome {
+    padding-bottom: 35vh;
+    font-size: 20px;
+}
+
+.tituloHome {
+    font-size: 36px;
+}
+
+.imagemHome {
+    height:100vh;
+    object-fit:cover;
+}
+
+
+@media(max-width: 768px) {
+
+    .textoHome {
+        padding-bottom: 25vh;
+        font-size: 16px;
+    }
+    
+    .tituloHome {
+        font-size: 28px;
+    }
+
+    .imagemHome {
+        height:80vh;
+        object-fit:cover;
+    }
+
+#home .section {
+    height: auto;
+
+}
+
+}
+
+footer {
+    background: white;
+    margin: auto 0;
+    padding: 15px 35px;
+}
+
+footer .row {
+    margin: 0;
+}
+.forma-pagamento {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forma-pagamento h3 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.conhecaFooter {
+    padding-left: 90px;
+}
+
+.logoFooter {
+    padding-left: 270px;
+}
+
+@media(max-width: 768px) {
+    .fotoFooter{
+        display: none;
+    }
+
+    .conhecaFooter {
+        padding-left: 0px;
+    }
+
+    .logoFooter {
+        padding-left: 0px;
+    }
+
+    .infoFooter{
+    display:flex;
+    flex-wrap: wrap;
+    }
+
 
 }
