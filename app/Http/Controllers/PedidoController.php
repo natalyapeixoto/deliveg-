@@ -11,7 +11,7 @@ class PedidoController extends Controller
 {
     public function setNewPedido(){
         $pedidos = new Pedido();
-        
+       
         $pedidos->user_id = Auth::user()->id;
         $pedidos->items = Request::get('items');
         $pedidos->items_id = Request::get('items_id');

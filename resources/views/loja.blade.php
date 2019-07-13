@@ -35,7 +35,7 @@
           
       </div>
       <p id="precoFinal"></p> 
-      <a type="button" class="btn btn-success" id="sendToDb" href='/pagamento'>Finalizar Compra</a>
+      <a type="button" class="btn btn-success" id="sendToDb" >Finalizar Compra</a>
       </div>
         </div>
       </div>
