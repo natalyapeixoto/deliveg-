@@ -21,8 +21,7 @@ class CreateTableProduto extends Migration
             $table->string('foto');
             $table->float('preco');
             $table->integer('estoque');
-            $table->foreign('id_categoria')->references('id')->on('users');
-            $table->timestamps();
+            $table->foreign('id_categoria')->references('id_categoria')->on('categoria');
         });
     }
 

@@ -30,12 +30,14 @@
           <h5 class="nome-produto-card">Itens Selecionados:</h5>
           <div id='modal'>
 
-          
-          
-          
+
       </div>
-      <p id="precoFinal"></p> 
-      <a type="button" class="btn btn-success" id="sendToDb" href='/pagamento'>Finalizar Compra</a>
+      <p id="precoFinal"></p>
+      <form method="post" action="/pedidos"> 
+      @csrf
+      <input name="pedido" value="" id="sendToDb">
+      <button type="submit" class="btn btn-success" >Finalizar Compra</button>
+    </form>
       </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ function  getProducts () {
     .then(res => res.json())
     .then(res =>{
       prod = res
+      console.log(res)
       renderProducts(res)
     })
 }
@@ -42,6 +43,8 @@ function renderProducts(produtos) {
   if (produtos <= 0) return document.getElementById('produtos-wrapper').innerHTML = 'nenhum produto nesta categoria'
     
   produtos.forEach(produto => {
+    console.log(produto)
+
     document.getElementById('produtos-wrapper').innerHTML += `
     <div class="col-md-4 col-sm-6 col-xs-1" >
       <div class="card">
@@ -49,7 +52,7 @@ function renderProducts(produtos) {
         <div class="card-body">
             <h5 class="nome-produto-card" id="produto-nome">${produto.nome}</h5>
             <p class="preco-card" id="produto-preco">
-              R$ ${produto.preco.toFixed(2).replace('.', ',')} /kg
+              R$ ${parseFloat(produto.preco).toFixed(2).replace('.', ',')} /kg
             </p>
             <button class="add" onclick="addItemToCart(
             '${produto.id_produto}',
@@ -124,7 +127,7 @@ function showTotal(listaDeCompras) {
   document.getElementById('total').textContent = TOTALDACOMPRA.toFixed(2).replace('.', ',')
   document.getElementById('precoFinal').innerHTML = `
   <p class="preco-card">
-    R$ ${parseInt(TOTALDACOMPRA).toFixed(2).replace('.', ',')}
+    R$ ${parseFloat(TOTALDACOMPRA).toFixed(2).replace('.', ',')}
   </p>`
 }
 
@@ -133,7 +136,6 @@ document.getElementById('buy').addEventListener('click', renderModal)
 
 function renderModal() {
   document.getElementById('modal').innerHTML  = ''
-  
   for (var key in localStorage) {
     if (localStorage.hasOwnProperty(key)) {
       if(localStorage[key] > 0) { 
@@ -142,28 +144,22 @@ function renderModal() {
       } 
     }
   }
+  sendItemstoBill()
 }   
 
-document.getElementById('sendToDb').onclick = sendItemstoBill
 
 function sendItemstoBill() {
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-    type: 'POST',
-    dataType: 'json',
-    url: 'http://deliveg.herokuapp/pedidos',
-  })
-  
-  $.ajax({
-    data: {
+ const data =  {
       items:JSON.stringify(ITEMS),
       items_id: JSON.stringify(IDS), 
       total:TOTALDACOMPRA, 
       status:'nao-pago'
-    },
-  }).then(res => console.log(res))
+    }
+  const input = document.getElementById('sendToDb')
+  input.style.display = 'none'
+  input.value = JSON.stringify(data)  
 
   localStorage.clear()
 }
+
+
