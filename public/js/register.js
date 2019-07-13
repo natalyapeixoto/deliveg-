@@ -300,12 +300,7 @@ let botaoEnviar = document.querySelector('.botao')
 function validate(){
     reduce = erro.reduce(myFunc)
     if(erro.length == 9 && reduce == 0){
-    botaoEnviar.innerHTML =
-        `
-        <button id="cadastro-btn" type="submit" class="btn btn-primary">
-        Enviar Cadastro!
-        </button>
-    `    
+        submit.setAttribute('disabled', false)
     }
 }
 
