@@ -127,7 +127,7 @@ function showTotal(listaDeCompras) {
   document.getElementById('total').textContent = TOTALDACOMPRA.toFixed(2).replace('.', ',')
   document.getElementById('precoFinal').innerHTML = `
   <p class="preco-card">
-    R$ ${parseInt(TOTALDACOMPRA).toFixed(2).replace('.', ',')}
+    R$ ${parseFloat(TOTALDACOMPRA).toFixed(2).replace('.', ',')}
   </p>`
 }
 
