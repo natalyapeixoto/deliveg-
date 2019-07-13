@@ -299,8 +299,8 @@ let botaoEnviar = document.querySelector('.botao')
 
 function validate(){
     reduce = erro.reduce(myFunc)
-    if(erro.length == 9 && reduce == 0){
-        submit.removeAttribute('disabled')
+    if(!erro.length == 9 && !reduce == 0){
+        submit.setAtribute('disabled')
     }
 }
 

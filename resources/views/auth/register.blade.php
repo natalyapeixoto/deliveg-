@@ -107,7 +107,7 @@
                     
                 </div>
             </div>              
-            <button id="cadastro-btn" disabled type="submit" class="btn btn-primary">
+            <button id="cadastro-btn" type="submit" class="btn btn-primary">
              Enviar Cadastro!
         </button>
 
