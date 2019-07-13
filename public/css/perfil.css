@@ -18,6 +18,19 @@
     align-items: flex-start;
    
   }
+
+  .tituloPerfil{
+    font-size: 36px;
+    font-weight: bold;
+    color: #82AB4D;
+  }
+
+  .boxPerfil {
+    border: 1px solid;
+    border-color: #82AB4D;
+    border-radius: .3rem;
+    margin: 2px;
+  }
   
   @media screen and (max-width:900px) {
     .container-perfil {

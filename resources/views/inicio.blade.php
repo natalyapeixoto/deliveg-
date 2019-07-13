@@ -6,37 +6,37 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target=#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 zoom" src="img/maca.jpg" alt="maça">
-                        <div class="carousel-caption d-md-block">
-                            <h5>Maçã</h5>
-                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <img class="d-block w-100 zoom imagemHome" src="img/maca.jpg" alt="maça" >
+                        <div class="carousel-caption d-md-block textoHome">
+                            <h5 class="tituloHome">Frutas</h5>
+                            <p class="paragrafo-home">As frutas mais frescas e deliciosas para seu negócio.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 zoom" src="img/cenoura.jpg" alt="cenoura">
-                        <div class="carousel-caption d-md-block">
-                            <h5>Cenoura</h5>
-                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <img class="d-block w-100 zoom imagemHome" src="img/cenoura.jpg" alt="cenoura" >
+                        <div class="carousel-caption d-md-block textoHome">
+                            <h5 class="tituloHome">Vegetais</h5>
+                            <p class="paragrafo-home">Vegetais de qualidade a qualquer hora.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 zoom" src="img/alface.jpg" alt="alface">
-                        <div class="carousel-caption d-md-block">
-                            <h5>Alface</h5>
-                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <img class="d-block w-100 zoom imagemHome" src="img/alface.jpg" alt="alface">
+                        <div class="carousel-caption d-md-block textoHome">
+                            <h5 class="tituloHome">Verduras</h5>
+                            <p class="paragrafo-home">Sempre com folhas novas e frescas disponíveis.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 zoom" src="img/pimentao.jpg" alt="pimentao">
-                        <div class="carousel-caption d-md-block">
-                            <h5>Pimentão</h5>
-                            <p class="paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <img class="d-block w-100 zoom imagemHome" src="img/pimentao.jpg" alt="pimentao">
+                        <div class="carousel-caption d-md-block textoHome">
+                            <h5 class="tituloHome">Legumes</h5>
+                            <p class="paragrafo-home">Legumes saborosos ao seu alcance.</p>
                         </div>
                     </div>
                 </div>
@@ -59,8 +59,8 @@
                 <h2 class="text-center text-uppercase">O que fazemos</h2>
             </div>
             <div class="col-md-6 m-auto OqueFazemos-div">
-                <p class="paragrafo-home text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam
-                reiciendis necessitatibus odio fuga aliquam.</p>
+                <p class="paragrafo-home text-center">Somos um delivery de frutas, legumes e vegetais para 
+                    seu restaurante ou negócio. Com produtos da melhor qualidade todos os dias para entrega.</p>
             </div>
         </div>
     </section>
@@ -71,8 +71,8 @@
                     <div class="col-md-5">
                         <h2 class="text-uppercase center">Quem Somos</h2>
                         <div class="section_divp">
-                            <p class="center paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
-                            necessitatibus odio fuga aliquam.</p>
+                            <p class="center paragrafo-home">Uma rede de apoio que visa melhorar o serviço gastronômico de produtos naturais
+                                para levar à você a melhor qualidade de alimentos e no menor tempo de entrega.</p>
                         </div>
                     </div>
                     <div col="col-md-7 image-center">
@@ -90,8 +90,7 @@
                     <div class="col-md-5">
                         <h2 class="text-uppercase center">Raio de Entrega</h2>
                         <div class="section_divp">
-                            <p class="center paragrafo-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quisquam totam reiciendis
-                            necessitatibus odio fuga aliquam.</p>
+                            <p class="center paragrafo-home">Nossas entregas abrangem grande parte da cidade, confira se seu local é atendido.</p>
                         </div>
                     </div>
                     <div col="col-md-7">
