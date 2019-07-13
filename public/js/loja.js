@@ -4,7 +4,7 @@ showTotal(0)
 let prod = [];
 
 function  getProducts () {
-  return fetch('http://localhost:8000/produtos')
+  return fetch('http://deliveg.herokuapp.com/produtos')
     .then(res => res.json())
     .then(res =>{
       prod = res
@@ -153,7 +153,7 @@ function sendItemstoBill() {
     },
     type: 'POST',
     dataType: 'json',
-    url: 'http://localhost:8000/pedidos',
+    url: 'http://deliveg.herokuapp/pedidos',
   })
   
   $.ajax({

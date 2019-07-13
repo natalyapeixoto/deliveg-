@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Deliveg | Loja</title>
+@extends('layouts.app')
 
-    <link rel="stylesheet" href="{{ secure_asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('css/loja.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('css/app.css'}}">
-    
-</head>
-<body>
-
-@include('navbar')
+@section('content')
 
 <div class="container" style="margin-top: 120px;">
     <div class="row">
@@ -57,18 +42,16 @@
     </div>
   </div>
 </div>
-@csrf
-<footer id='cart'>
+
+<div id='cart'>
 
     <button  class="btn btn-continuar" data-toggle="modal" data-target="#modal-produto" id="buy">Ver carrinho</button>
     <div class='cart__content'>
     <h2>Valor Total R$</h2><p id='total'></p>
     </div>
-  </footer>
+  </div>
 
-    <script src='/js/app.js'></script>
+
     <script src='/js/loja.js'></script>
 
-
-</body>
-</html>
+@endsection

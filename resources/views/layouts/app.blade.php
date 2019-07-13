@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ config('app.name', 'Deliveg') }}</title>
+  <title>Deliveg</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/loja.css">
+  <link rel="stylesheet" href="../css/pagamento.css">
+
 </head>
 <body>
 
@@ -41,10 +44,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item link-green" href="/perfil">perfil</a>
                                     <a class="dropdown-item link-green" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('logout') }}
+                                        @csrf
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -63,6 +68,7 @@
         <footer class="text-muted text-center text-small">
             <p class="mb-1">© 2019 Deliveg</p>
         </footer>
+
         <script src='../js/app.js'></script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 function getCurrentPedido() {
-  return fetch('http://localhost:8000/pagapedido')
+  return fetch('http://deliveg.herokuapp/pagapedido')
     .then(res => res.json())
     .then(data => renderPedido(data))
 } 
@@ -20,7 +20,7 @@ function pagar() {
       },
       type: 'POST',
       dataType: 'json',
-      url: 'http://localhost:8000/pagamentos',
+      url: 'http://deliveg.herokuapp/pagamentos',
     })
     
     $.ajax({

@@ -36,8 +36,11 @@
                             <a class="dropdown-item link-green" href="/perfil">perfil</a>
                             <a class="dropdown-item link-green" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
+                                
+                                                document.getElementById('logout-form').submit();"
+                                                    >
                                 {{ __('logout') }}
+                                
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -53,9 +56,6 @@
     <body>
          @yield('content')
 
-        <footer class="text-muted text-center text-small">
-            <p class="mb-1">© 2019 Deliveg</p>
-        </footer>
-        <script src='/js/app.js'></script>
+        
     </body>
 </html>
