@@ -44,6 +44,7 @@ function renderProducts(produtos) {
     
   produtos.forEach(produto => {
     console.log(produto)
+
     document.getElementById('produtos-wrapper').innerHTML += `
     <div class="col-md-4 col-sm-6 col-xs-1" >
       <div class="card">
@@ -51,7 +52,7 @@ function renderProducts(produtos) {
         <div class="card-body">
             <h5 class="nome-produto-card" id="produto-nome">${produto.nome}</h5>
             <p class="preco-card" id="produto-preco">
-              R$ ${produto.preco.toFixed(2).replace('.', ',')} /kg
+              R$ ${parseFloat(produto.preco).toFixed(2).replace('.', ',')} /kg
             </p>
             <button class="add" onclick="addItemToCart(
             '${produto.id_produto}',
