@@ -135,9 +135,7 @@ function showTotal(listaDeCompras) {
 document.getElementById('buy').addEventListener('click', renderModal)
 
 function renderModal() {
-  sendItemstoBill()
   document.getElementById('modal').innerHTML  = ''
-  
   for (var key in localStorage) {
     if (localStorage.hasOwnProperty(key)) {
       if(localStorage[key] > 0) { 
@@ -146,6 +144,7 @@ function renderModal() {
       } 
     }
   }
+  sendItemstoBill()
 }   
 
 
@@ -158,8 +157,7 @@ function sendItemstoBill() {
     }
   const input = document.getElementById('sendToDb')
   input.style.display = 'none'
-  input.value = JSON.stringify(data)
-  console.log(input.value)
+  input.value = JSON.stringify(data)  
 
   localStorage.clear()
 }

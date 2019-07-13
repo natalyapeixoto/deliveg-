@@ -23,17 +23,19 @@ class PedidoController extends Controller
         // "total":3,
         // "status":"nao-pago"}
 
-        // $pedidos = new Pedido();
+        $pedidos = new Pedido();
        
-        // $pedidos->user_id = Auth::user()->id;
-        // $pedidos->items = Request::get('items');
-        // $pedidos->items_id = Request::get('items_id');
-        // $pedidos->total = Request::get('total');
-        // $pedidos->status = Request::get('status');
+        $pedidos->user_id = Auth::user()->id;
+        $pedidos->items = $arrayPedido->items;
+        $pedidos->items_id = $arrayPedido->items_id;
+        $pedidos->total = $arrayPedido->total;
+        $pedidos->status = $arrayPedido->status;
+       
+        $pedidos->save();
+
+        return view('pagamento')
         
-        // $pedidos->save();
-        
-        // return response()->json($pedidos,201);
+
 
     }
 
