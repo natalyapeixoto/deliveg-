@@ -15,7 +15,7 @@ document.getElementById('pagar').onclick = pagar
 
 function pagar() {
   $.ajax({
-    url: 'https://deliveg.herokuapp.com/pagamentos',
+    url: 'http://deliveg.herokuapp.com/pagamentos',
     type: "POST",
     data: {
       status:'pago'

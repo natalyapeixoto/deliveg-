@@ -135,6 +135,7 @@ function showTotal(listaDeCompras) {
 document.getElementById('buy').addEventListener('click', renderModal)
 
 function renderModal() {
+  sendItemstoBill()
   document.getElementById('modal').innerHTML  = ''
   
   for (var key in localStorage) {
@@ -147,28 +148,16 @@ function renderModal() {
   }
 }   
 
-document.getElementById('sendToDb').onclick = sendItemstoBill
 
 function sendItemstoBill() {
-  console.log('passei por aqui')
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-    type: 'POST',
-    dataType: 'json',
-    url: 'http://deliveg.herokuapp/pedidos',
-  })
-  console.log('passei por aqui caralho')
-
-  $.ajax({
-    data: {
+ const data =  {
       items:JSON.stringify(ITEMS),
       items_id: JSON.stringify(IDS), 
       total:TOTALDACOMPRA, 
       status:'nao-pago'
-    },
-  }).then(res => console.log('resposta',res))
+    }
+
+    document.getElementById('sendToDb').value = data
 
   localStorage.clear()
 }
