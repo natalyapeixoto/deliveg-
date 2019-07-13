@@ -156,8 +156,8 @@ function sendItemstoBill() {
       total:TOTALDACOMPRA, 
       status:'nao-pago'
     }
-   const input = document.getElementById('sendToDb')
-   input.style.display = 'none'
+  const input = document.getElementById('sendToDb')
+  input.style.display = 'none'
   input.value = JSON.stringify(data)
   console.log(input.value)
 
