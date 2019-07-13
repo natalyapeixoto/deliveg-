@@ -150,6 +150,7 @@ function renderModal() {
 document.getElementById('sendToDb').onclick = sendItemstoBill
 
 function sendItemstoBill() {
+  console.log('passei por aqui')
   $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -169,7 +170,7 @@ function sendItemstoBill() {
       total:TOTALDACOMPRA, 
       status:'nao-pago'
     },
-  }).then(res => console.log(res))
+  }).then(res => console.log('resposta',res))
 
   localStorage.clear()
 }
