@@ -16,7 +16,7 @@ name.onblur = () => {
     if(typeof erroNome !== 'undefined'){
         erroNome.innerHTML = ' '
     }
-    if(name.value.length <= 5 || name.value.length >= 10 || name.value == '' ){
+    if(name.value == '' ){
         erroNome = document.createElement('p')
         erroNome.setAttribute('style', 'color:red;')
         name.setAttribute('style', 'border-color:red;')                              
@@ -300,12 +300,7 @@ let botaoEnviar = document.querySelector('.botao')
 function validate(){
     reduce = erro.reduce(myFunc)
     if(erro.length == 9 && reduce == 0){
-    botaoEnviar.innerHTML =
-        `
-        <button id="cadastro-btn" type="submit" class="btn btn-primary">
-        Enviar Cadastro!
-        </button>
-    `    
+        submit.removeAttribute(disabled)
     }
 }
 
