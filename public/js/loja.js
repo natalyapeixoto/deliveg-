@@ -172,7 +172,6 @@ function sendItemstoBill() {
   }).then(res => console.log('resposta',res))
 
   localStorage.clear()
-  window.location = '/pagamento'
 }
 
 
