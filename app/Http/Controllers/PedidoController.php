@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Pedido;
 use Illuminate\Http\Request;
-use Request;
 
 // use App\Auth;
 use Illuminate\Support\Facades\Auth;
