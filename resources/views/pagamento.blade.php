@@ -4,6 +4,7 @@
 
 <div class="container">
     <div class="row">
+        <h3 id="quant"></h3>
         <div id="pagamento" class="col-xs-12 col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -12,6 +13,7 @@
                     </h3>
                 </div>
                 
+
                 <div class="panel-body">
                     <form role="form">
                     <div class="form-group">
@@ -46,7 +48,6 @@
                 </div>
             </div>
            
-            <p id="quant"></p>
       
             <br/>
             <button class="btn btn-success" id="pagar">Pagar</button>

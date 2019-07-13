@@ -1,5 +1,5 @@
 function getCurrentPedido() {
-  return fetch('http://deliveg.herokuapp/pagapedido')
+  return fetch('http://deliveg.herokuapp.com/pagapedido')
     .then(res => res.json())
     .then(data => renderPedido(data))
 } 
@@ -8,24 +8,22 @@ getCurrentPedido()
 
 function renderPedido(pedido) { 
   document.getElementById('quant').innerHTML = 
-  `Valor a pagar: R$${pedido.total.toFixed(2).replace('.', ',')}`
+  `Valor a pagar: R$${parseFloat(pedido.total).toFixed(2).replace('.', ',')}`
 }
 
 document.getElementById('pagar').onclick = pagar
 
 function pagar() {
-    $.ajaxSetup({
+    $.ajax({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
-      type: 'POST',
-      dataType: 'json',
-      url: 'http://deliveg.herokuapp/pagamentos',
-    })
-    
-    $.ajax({
+      url: 'http://deliveg.herokuapp.com/pagamentos',
+      type: "POST",
       data: {
-        status:'pago'
-      },
-    }).then(res => console.log(res))
+      status:'pago'
+    }
+   }).done(function(data) {
+     console.log(data);
+ })
 }

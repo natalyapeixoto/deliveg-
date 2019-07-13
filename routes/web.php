@@ -50,10 +50,11 @@ Route::get('/pagamento', function(){
     return view('pagamento');
 });
 
+
 Route::get('/sucesso', function(){
     return view('sucesso');
 });
 
-Route::post('/pagamentos', 'PedidoController@pagar');
+Route::post('/pagamentos', 'PagamentoController@pagar');
 
-Route::get('/pagapedido', 'PedidoController@pagamento');
+Route::get('/pagapedido', 'PagamentoController@pagamento');
