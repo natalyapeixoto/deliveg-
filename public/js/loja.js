@@ -159,10 +159,9 @@ function sendItemstoBill() {
     dataType: 'json',
     url: 'http://deliveg.heroku/pedidos',
   })
-  
+  console.log('passei por aqui caralho')
+
   $.ajax({
-    type: 'POST',
-    dataType: 'json',
     url: 'http://deliveg.heroku/pedidos',
     data: {
       items:JSON.stringify(ITEMS),
@@ -173,4 +172,7 @@ function sendItemstoBill() {
   }).then(res => console.log('resposta',res))
 
   localStorage.clear()
+  window.location = '/pagamento'
 }
+
+
