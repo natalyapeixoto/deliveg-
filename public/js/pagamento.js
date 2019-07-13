@@ -14,16 +14,13 @@ function renderPedido(pedido) {
 document.getElementById('pagar').onclick = pagar
 
 function pagar() {
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-    type: 'POST',
-    dataType: 'json',
-    url: 'http://localhost:8000/pedidos',
-  })
-  $.ajax({
-    data: {
+    $.ajax({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      url: 'http://deliveg.herokuapp.com/pagamentos',
+      type: "POST",
+      data: {
       status:'pago'
     }
    }).done(function(data) {
