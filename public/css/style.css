@@ -7,3 +7,7 @@
 @import url(pagamento.css);
 
 @import url(footer.css);
+
+body {
+  background-color: #ffffff;
+}

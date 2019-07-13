@@ -1,10 +1,14 @@
 footer {
-    background-color: rgb(233, 232, 224);
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 }
 
+.img-home {
+    width: 400px;
+}
 
+@media(max-width: 768px) {
+    .img-home {
+        width: 215px;
+    }
+    
+}
