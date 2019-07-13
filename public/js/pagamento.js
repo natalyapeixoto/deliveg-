@@ -20,7 +20,7 @@ function pagar() {
       },
       type: 'POST',
       dataType: 'json',
-      url: 'http://deliveg.herokuapp/pagamentos',
+      url: 'http://localhost/pagamentos',
     })
     
     $.ajax({

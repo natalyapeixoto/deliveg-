@@ -11,6 +11,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->insert([
+            'name' => 'teste',
+            'email' => 'teste@teste.com',
+            'password' => '1234',
+            'documento' => '05100124423',
+            'rua' => 'teste',
+            'cep' => '01227000',
+            'numero' => '1399',
+            'cep' => '01227000',
+            'cidade'=> 'Recife',
+            'estado' => 'SP'
+        ]);
+
         DB::table('categoria')->insert([
             'nome' => 'Legumes'        
         ]);
