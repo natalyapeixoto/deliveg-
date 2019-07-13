@@ -9,16 +9,31 @@ use Illuminate\Support\Facades\Auth;
 
 class PedidoController extends Controller
 {
-    public function setNewPedido(){
-        $pedidos = new Pedido();
+    public function setNewPedido(Request $request){
+        $jsonPedido = $request->input('pedido');
+        $arrayPedido = json_decode($jsonPedido);
+
+        var_dump($arrayPedido);  
+        echo '<br>';
+        var_dump($arrayPedido[item]);
+        echo '<br>';
+        var_dump($arrayPedido->item)  
+
+
+        // {"items":"{\"30\":3,\"Pimentão Vermelho\":1}",
+        // "items_id":"{\"30\":1}",
+        // "total":3,
+        // "status":"nao-pago"}
+
+        // $pedidos = new Pedido();
        
-        $pedidos->user_id = Auth::user()->id;
-        $pedidos->items = Request::get('items');
-        $pedidos->items_id = Request::get('items_id');
-        $pedidos->total = Request::get('total');
-        $pedidos->status = Request::get('status');
+        // $pedidos->user_id = Auth::user()->id;
+        // $pedidos->items = Request::get('items');
+        // $pedidos->items_id = Request::get('items_id');
+        // $pedidos->total = Request::get('total');
+        // $pedidos->status = Request::get('status');
         
-        $pedidos->save();
+        // $pedidos->save();
         
         return response()->json($pedidos,201);
 

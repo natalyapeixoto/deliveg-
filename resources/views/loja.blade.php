@@ -34,7 +34,7 @@
       </div>
       <p id="precoFinal"></p>
       <form method="post" action="/pedidos"> 
-      @crsf
+      @csrf
       <input name="pedido" value="" id="sendToDb">
       <a type="button" class="btn btn-success"  >Finalizar Compra</a>
     </form>
