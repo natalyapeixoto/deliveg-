@@ -1,5 +1,5 @@
 function getCurrentPedido() {
-  return fetch('http://deliveg.herokuapp/pagapedido')
+  return fetch('http://deliveg.herokuapp.com/pagapedido')
     .then(res => res.json())
     .then(data => renderPedido(data))
 } 
