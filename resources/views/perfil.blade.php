@@ -4,7 +4,7 @@
   <div class="container-perfil">
     <main class="display">
     @foreach( $usuarios as $usuario )
-    <div class="jubotron">
+    <div class="boxPerfil">
       <h1 class="tituloPerfil"> Bem-vinda(o) {{$usuario->name}}</h1>
       <hr class="my-4">
       <h3 class="my-3">Dados Cadastrais</h3>
