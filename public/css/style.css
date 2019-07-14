@@ -1,9 +1,10 @@
+@import url(app.css); 
+
 * {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
 
-@import url(app.css);
 @import url(navbar.css);
 
 @import url(home.css);
