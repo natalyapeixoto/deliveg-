@@ -83,6 +83,8 @@ img.card-img-top {
     align-items: center;
     background-color:rgb(96, 184, 134);
     width: 100%;
+    position:fixed;
+    bottom:0px;
 }
 .cart__content{
     display: flex;
@@ -140,10 +142,7 @@ img.card-img-top {
     color: #ffad29;
 }
 
-#buy{
-    position:fixed;
-    bottom:0px;
-}
+
 
 
 @media (max-width: 600px) {

@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.app')
 @section('content')
 
 <div class="sucesso">
@@ -6,9 +6,6 @@
         <h1>Sucesso!</h1> 
         <p>Seu pedido está sendo encaminhado</p>
 </div>
-            
-@endsection
-
 <footer id="footer" class="pt-4 my-md-5 pt-md-5  ">
         <div class="row justify-content-md-center infoFooter">
           
@@ -39,3 +36,6 @@
         <script src='../js/app.js'></script>
     </body>
 </html>
+         
+@endsection
+

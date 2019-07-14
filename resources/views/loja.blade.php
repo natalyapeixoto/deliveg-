@@ -58,10 +58,10 @@
 
 
     <script src='/js/loja.js'></script>
+    <script src='../js/app.js'></script>
+    </body>
+</html>
 
 @endsection
 
 
-        <script src='../js/app.js'></script>
-    </body>
-</html>
