@@ -140,9 +140,15 @@ img.card-img-top {
     color: #ffad29;
 }
 
+#buy{
+    position:fixed;
+    bottom:0px;
+}
+
 
 @media (max-width: 600px) {
     .card {
         margin: 1em;
     }
 }
+

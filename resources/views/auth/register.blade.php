@@ -58,7 +58,7 @@
                 <label for="documento" class="col-md-12 col-form-label text-md-left">{{ __('CPF/CNPJ') }}</label>
 
                 <div class="col-md-12">
-                    <input id="documento" type="text" class="form-control" name="documento">
+                    <input id="documento" type="tel" class="form-control" name="documento">
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
                 <label for="rua" class="col-md-12 col-form-label text-md-left">{{ __('Endereço') }}</label>
 
                 <div class="col-md-12">
-                    <input id="rua" type="text" class="form-control" name="rua">
+                    <input id="rua" type="tel" class="form-control" name="rua">
                 </div>
             </div>
 
@@ -74,7 +74,7 @@
                 <label for="numero" class="col-md-12 col-form-label text-md-left">{{ __('Número') }}</label>
 
                 <div class="col-md-12">
-                    <input id="numero" type="text" class="form-control" name="numero">
+                    <input id="numero" type="tel" class="form-control" name="numero">
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
                 <label for="cep" class="col-md-12 col-form-label text-md-left">{{ __('CEP') }}</label>
 
                 <div class="col-md-12">
-                    <input id="cep" type="text" class="form-control" name="cep">
+                    <input id="cep" type="tel" class="form-control" name="cep">
                 </div>
             </div>
 
