@@ -9,11 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class PedidoController extends Controller
 {
-    public function setNewPedido(Request $request){
+    public function setNewPedido(Request $request) {
         $jsonPedido = $request->input('pedido');
         $arrayPedido = json_decode($jsonPedido);
-
-   
 
         $pedidos = new Pedido();
        
@@ -22,11 +20,10 @@ class PedidoController extends Controller
         $pedidos->items_id = $arrayPedido->items_id;
         $pedidos->total = $arrayPedido->total;
         $pedidos->status = $arrayPedido->status;
-       
-        $pedidos->save();
 
-        return view('pagamento');
-   
+        $pedidos->save();
+        
+        return view('pagamento');   
     }
 
     public function pagamento() {

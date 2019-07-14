@@ -38,7 +38,9 @@ function pagar() {
 
 let erro = []
 
+
 const cardNumber = document.getElementById("cardNumber")
+
 cardNumber.addEventListener("blur", function(){
   if (cardNumber.value.length < 16) {
     document.getElementById("erroCardNumber").innerHTML="Digite um número de cartão válido"
@@ -50,6 +52,7 @@ cardNumber.addEventListener("blur", function(){
 })
 
 const cardMes = document.getElementById("cardMes")
+
 cardMes.addEventListener("blur", function(){
   if (cardMes.value.length < 2 && cardMes.value <= 12) {
     document.getElementById("erroCardMes").innerHTML="Mês inválido"
@@ -60,7 +63,9 @@ cardMes.addEventListener("blur", function(){
   document.getElementById("erroCardMes").innerHTML=""
 })
 
+
 const cardAno = document.getElementById("cardAno")
+
 cardAno.addEventListener("blur", function(){
   if (cardAno.value.length < 2 && cardAno.value >= 19) {
     document.getElementById("erroCardAno").innerHTML="Ano inválido"
@@ -71,7 +76,9 @@ cardAno.addEventListener("blur", function(){
   document.getElementById("erroCardAno").innerHTML=""
 })
 
+
 const cardCvv = document.getElementById("cardCvv")
+
 cardCvv.addEventListener("blur", function(){
   if (cardCvv.value.length < 3) {
     document.getElementById("erroCardCvv").innerHTML="Cvv inválido"
