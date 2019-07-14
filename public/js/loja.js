@@ -14,7 +14,7 @@ function  getProducts () {
 }
 
 function renderCategories() {
-  const categorias = ['Legumes', 'Verduras', 'Frutas', 'Todos']
+  const categorias = ['Legumes', 'Frutas', 'Verduras','Todos']
 
   categorias.forEach((categoria, index) => {
     document.getElementById('categories').innerHTML +=`
