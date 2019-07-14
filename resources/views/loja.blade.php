@@ -46,7 +46,6 @@
 </div>
 
 <div>
-{{ $produtos->links() }}
 </div>
 
 <div id='cart'>
@@ -61,3 +60,8 @@
     <script src='/js/loja.js'></script>
 
 @endsection
+
+
+        <script src='../js/app.js'></script>
+    </body>
+</html>

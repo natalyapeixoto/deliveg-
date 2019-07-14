@@ -23,7 +23,7 @@ class LojaController extends Controller
     
     public function mostrarProdutos () {
         $categorias = Categoria::all();
-        $produtos = Produto::simplePaginate(6);
+        $produtos = Produto::all();
         return view('loja')->with('categorias', $categorias)->with('produtos', $produtos);
     }
 
