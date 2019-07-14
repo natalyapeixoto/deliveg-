@@ -5,7 +5,7 @@
     <main class="display">
     @foreach( $usuarios as $usuario )
     <div class="boxPerfil">
-      <h1 class="tituloPerfil"> Bem-vinda(o) {{$usuario->name}}</h1>
+      <h1 class="tituloPerfil"> Olá, {{$usuario->name}}!</h1>
       <hr class="my-4">
       <h3 class="my-3">Dados Cadastrais</h3>
       <p class="cadastro__cnpj"><strong>Email</strong>: {{$usuario->email}}</p>
