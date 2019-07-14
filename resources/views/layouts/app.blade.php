@@ -28,7 +28,7 @@
         <div id="navbarSupportedContent" class="navbar-right collapse navbar-collapse">
             <ul class="navbar-nav nav-mobile" >
                 @guest
-                    <li class="item-mobile nav-item navbar-notlogged borda-mobile">
+                    <li class="item-mobile nav-item navbar-notlogged">
                                 <a class="link-green" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
                             @if (Route::has('register'))
