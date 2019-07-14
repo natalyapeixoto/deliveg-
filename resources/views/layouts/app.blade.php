@@ -8,8 +8,8 @@
   <title>Deliveg</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/loja.css">
-  <link rel="stylesheet" href="../css/pagamento.css">
   <link rel="stylesheet" href="../css/sucesso.css">
+  <link rel="stylesheet" href="../css/pagamento.css">
 
 </head>
 <body>
