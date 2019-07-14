@@ -145,9 +145,6 @@ img.card-img-top {
     color: #ffad29;
 }
 
-
-
-
 @media (max-width: 600px) {
     .card {
         margin: 1em;
