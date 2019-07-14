@@ -48,9 +48,8 @@
       </table>
     </div>
   </div>  
-@endsection
 
-<footer id="footer" class="pt-4 my-md-5 pt-md-5  ">
+  <footer id="footer" class="pt-4 my-md-5 pt-md-5  ">
         <div class="row justify-content-md-center infoFooter">
           
           <div class="col-4 conhecaFooter">
@@ -80,3 +79,6 @@
         <script src='../js/app.js'></script>
     </body>
 </html>
+@endsection
+
+
