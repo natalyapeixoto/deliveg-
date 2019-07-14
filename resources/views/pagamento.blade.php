@@ -32,13 +32,13 @@
                                         <span id="erroCardMes"></span>
                                     </div>
                                     <div class="col-md-6 col-sm-12">
-                                        <input type="tel" class="form-control" id="cardAno" placeholder="AA" required /></div>
+                                        <input type="tel" class="form-control" id="cardAno" placeholder="AA" required />
                                         <span id="erroCardAno"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-5 pull-right">
+                        <div class="col-xs-5 col-md-5">
                             <div class="form-group">
                                 <label for="cvCode">
                                     CV</label>
