@@ -14,11 +14,10 @@ function renderPedido(pedido) {
 document.getElementById('pagar').onclick = pagar
 
 function pagar() {
-  if (document.getElementById("erroCardNumber").textContent && document.getElementById("erroCardMes").textContent &&
-  document.getElementById("erroCardAno").textContent && document.getElementById("erroCardCvv").textContent) {
+  if (document.getElementById("erroCardNumber").textContent || document.getElementById("erroCardMes").textContent ||
+  document.getElementById("erroCardAno").textContent || document.getElementById("erroCardCvv").textContent) {
     return
   }
-
 
     $.ajax({
       headers: {
