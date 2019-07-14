@@ -2,10 +2,15 @@
 @section('content')
 
 <div class="sucesso">
+  <div class="gif">
         <img class="gifSucesso" src="./img/sucesso.gif">
+  </div>
+  <div class ="mensagemSucesso">
         <h1>Sucesso!</h1> 
-        <p>Seu pedido está sendo encaminhado</p>
+        <p>Seu pedido está sendo encaminhado!</p>
+  </div>      
 </div>
+
 <footer id="footer" class="pt-4 my-md-5 pt-md-5  ">
         <div class="row justify-content-md-center infoFooter">
           
