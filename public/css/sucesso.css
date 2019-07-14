@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
+  text-align:center;
 }
 .gifSucesso {
   max-width: 300px;

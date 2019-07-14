@@ -1,5 +1,3 @@
-
-
 #pagamento {
     width: 100%;
     border: 1px solid #ccc;
@@ -20,4 +18,13 @@
 
 #expMonth {
     margin: 0;
+}
+
+@media (max-width:600px) {
+    #quant {
+        padding: 20px 15px;
+    }
+    #pagamento {
+        margin:100px 15px 100px;
+    }
 }

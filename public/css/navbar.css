@@ -37,14 +37,6 @@ a.link-green:hover {
     display: flex;
 }
 
-.item-mobile {
-    margin: 10px auto;
-    padding: 15px 0 5px;
-    border-top: 1px solid #ccc;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 @media (max-width: 1024px) {
     .navbar-right {
         display: block;
@@ -58,10 +50,15 @@ a.link-green:hover {
         flex-direction: column;
         align-items: flex-end;        
     }
-
-    .borda-mobile{
-        border-bottom: 1px solid #82AB4D;
-    }
-    
-
 }
+
+@media (max-width:600px) {
+    .item-mobile {
+        margin: 10px auto;
+        padding: 15px 0 5px;
+        border-top: 1px solid #ccc;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+} 

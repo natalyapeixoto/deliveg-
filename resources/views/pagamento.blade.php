@@ -17,7 +17,7 @@
                     <div class="form-group">
                         <label for="cardNumber">Cartão</label>
                         <div class="input-group">
-                            <input type="tel" class="form-control" minlength='16' id="cardNumber" placeholder="Número do Cartão"
+                            <input type="tel" class="form-control" maxlength='16' id="cardNumber" placeholder="Número do Cartão"
                                 required autofocus />
                                 <span id="erroCardNumber"></span>
                         </div>
@@ -25,18 +25,20 @@
                     <div class="row">
                         <div class="col-xs-7 col-md-7">
                             <div id="expMonth" class="form-group">
-                                <label for="expityMonth">
-                                    Data</label>
-                                <div class="col-xs-6 col-lg-8">
-                                    <input type="text" class="form-control" id="cardMes" placeholder="MM" required />
-                                    <span id="erroCardMes"></span>
+                                <label for="expityMonth">Data</label>
+                                <div class="row">    
+                                    <div class="col-md-6 col-sm-12">
+                                        <input type="tel" class="form-control" id="cardMes" placeholder="MM" required />
+                                        <span id="erroCardMes"></span>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <input type="tel" class="form-control" id="cardAno" placeholder="AA" required /></div>
+                                        <span id="erroCardAno"></span>
+                                    </div>
                                 </div>
-                                <div class="col-xs-6 col-lg-8">
-                                    <input type="text" class="form-control" id="cardAno" placeholder="AA" required /></div>
-                                    <span id="erroCardAno"></span>
                             </div>
                         </div>
-                        <div class="col-xs-5 col-md-5 pull-right">
+                        <div class="col-xs-12 col-md-5 pull-right">
                             <div class="form-group">
                                 <label for="cvCode">
                                     CV</label>
