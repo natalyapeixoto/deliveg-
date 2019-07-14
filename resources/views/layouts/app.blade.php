@@ -46,11 +46,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item link-green" href="/perfil">perfil</a>
+                                    <a class="dropdown-item link-green" href="/perfil">Perfil</a>
                                     <a class="dropdown-item link-green" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('logout') }}
+                                        {{ __('Logout') }}
                                         @csrf
                                     </a>
 
