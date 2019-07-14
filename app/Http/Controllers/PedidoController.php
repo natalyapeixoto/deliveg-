@@ -13,15 +13,7 @@ class PedidoController extends Controller
         $jsonPedido = $request->input('pedido');
         $arrayPedido = json_decode($jsonPedido);
 
-        var_dump($arrayPedido);  
-        echo '<br>';
-        var_dump($arrayPedido->items);  
-
-
-        // {"items":"{\"30\":3,\"Pimentão Vermelho\":1}",
-        // "items_id":"{\"30\":1}",
-        // "total":3,
-        // "status":"nao-pago"}
+   
 
         $pedidos = new Pedido();
        
@@ -34,9 +26,7 @@ class PedidoController extends Controller
         $pedidos->save();
 
         return view('pagamento');
-        
-
-
+   
     }
 
     public function pagamento() {
