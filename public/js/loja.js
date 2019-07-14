@@ -85,18 +85,18 @@ function addItemToCart(id, preco, nome) {
   
   if(ITEMS[id]) { 
     localStorage.setItem(nome, ++counter)
-    ITEMS[id] = parseInt(ITEMS[id]) + parseInt(preco)
+    ITEMS[id] = parseFloat(ITEMS[id]) + parseFloat(preco)
     ITEMS[nome] += 1
     IDS[id] += 1
   } else {
     counter = 1
-    ITEMS[id] = parseInt(preco)
+    ITEMS[id] = parseFloat(preco)
     ITEMS[nome] = 1
     localStorage.setItem(nome, counter)
     IDS[id] = 1
   }
 
-  listaDeCompras.push(parseInt(preco))
+  listaDeCompras.push(parseFloat(preco))
   showTotal(listaDeCompras)
 }
 
@@ -104,7 +104,7 @@ function removeItemFromCart(id, preco, nome) {
   if(!ITEMS[id]){return}
 
   if(ITEMS[id]) { 
-    ITEMS[id] = parseInt(ITEMS[id]) - parseInt(preco)
+    ITEMS[id] = parseFloat(ITEMS[id]) - parseFloat(preco)
     ITEMS[nome] -=1
     localStorage.setItem(nome, --counter)
     IDS[id] -= 1
