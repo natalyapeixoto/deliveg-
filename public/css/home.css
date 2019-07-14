@@ -134,7 +134,7 @@ p.paragrafo-home{
 
     .imagemHome {
         height:80vh;
-        object-fit:cover;
+        object-fit:none;
     }
 
 #home .section {
