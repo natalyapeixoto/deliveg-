@@ -33,7 +33,7 @@
             <div class="form-group row">
                 <div class="col-md-6 offset-md-2">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} style="margin-left:-5rem;">
 
                         <label class="form-check-label" for="remember">
                              {{ __('Manter Logado') }}
