@@ -19,6 +19,7 @@
                         <div class="input-group">
                             <input type="tel" class="form-control" minlength='16' id="cardNumber" placeholder="Número do Cartão"
                                 required autofocus />
+                                <span id="erroCardNumber"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -27,17 +28,20 @@
                                 <label for="expityMonth">
                                     Data</label>
                                 <div class="col-xs-6 col-lg-8">
-                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                    <input type="text" class="form-control" id="cardMes" placeholder="MM" required />
+                                    <span id="erroCardMes"></span>
                                 </div>
                                 <div class="col-xs-6 col-lg-8">
-                                    <input type="text" class="form-control" id="expityYear" placeholder="AA" required /></div>
+                                    <input type="text" class="form-control" id="cardAno" placeholder="AA" required /></div>
+                                    <span id="erroCardAno"></span>
                             </div>
                         </div>
                         <div class="col-xs-5 col-md-5 pull-right">
                             <div class="form-group">
                                 <label for="cvCode">
                                     CV</label>
-                                <input type="password" minlength='3' class="form-control" id="cvCode" placeholder="CV" required />
+                                <input type="password" minlength='3' class="form-control" id="cardCvv" placeholder="CV" required />
+                                <span id="erroCardCvv"></span>
                             </div>
                         </div>
                       </div>
