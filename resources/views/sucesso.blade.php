@@ -8,6 +8,7 @@
   <div class ="mensagemSucesso">
         <h1>Sucesso!</h1> 
         <p>Seu pedido está sendo encaminhado!</p>
+        <a href="/loja">Voltar para Loja ></a>
   </div>      
 </div>
 
