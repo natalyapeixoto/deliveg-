@@ -108,7 +108,7 @@
             <h5>Conheça</h5>
             <ul class="list-unstyled text-small">
             <li><a class="text-muted" href="/entrar">Entrar</a></li>
-              <li><a class="text-muted" href="/cadastro">Cadastrar</a></li>
+              <li><a class="text-muted" href="/register">Cadastrar</a></li>
               <li><a class="text-muted" href="/#quemSomos">Quem Somos</a></li>
             </ul>
           </div> 

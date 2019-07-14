@@ -44,10 +44,9 @@ Route::get('produtos', 'ProdutoController@getProdutos');
 
 Route::post('pedidos', 'PedidoController@setNewPedido');
 
-Route::get('/pagamento', function(){
+Route::get('/pedidos', function(){
     return view('pagamento');
 });
-
 
 Route::get('/sucesso', function(){
     return view('sucesso');

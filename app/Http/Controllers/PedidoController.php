@@ -20,10 +20,10 @@ class PedidoController extends Controller
         $pedidos->items_id = $arrayPedido->items_id;
         $pedidos->total = $arrayPedido->total;
         $pedidos->status = $arrayPedido->status;
-       
-        $pedidos->save();
 
-        return view('pagamento');
+        $pedidos->save();
+        
+        return view('pagamento');   
     }
 
     public function pagamento() {
