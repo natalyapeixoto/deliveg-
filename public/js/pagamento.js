@@ -14,41 +14,51 @@ function renderPedido(pedido) {
         .replace(".", ",")}`
 }
 
+
 const cardNumber = document.getElementById("cardNumber")
 
-cardNumber.addEventListener("blur", function() {
+cardNumber.addEventListener("blur", function(event) {
+    const erroMsg = document.getElementById("erroCardNumber")
     if (cardNumber.value.length < 16) {
-        document.getElementById("erroCardNumber").innerHTML =
-            "Digite um número de cartão válido"
-        document.getElementById("erroCardNumber").style.color = "red"
-        document.getElementById("erroCardNumber").style.display = "block"
-        document.getElementById("erroCardNumber").style.fontSize = "12px"
+        erroMsg.textContent = "Digite um número de cartão válido"
+        erroMsg.style.color = "red"
+        erroMsg.style.display = "block"
+        erroMsg.style.fontSize = "12px"
+    } else {
+        erroMsg.textContent = ''
     }
-    document.getElementById("erroCardNumber").innerHTML = ""
 })
 
 const cardMes = document.getElementById("cardMes")
 
 cardMes.addEventListener("blur", function() {
-    if (cardMes.value.length < 2 && cardMes.value <= 12) {
-        document.getElementById("erroCardMes").innerHTML = "Mês inválido"
-        document.getElementById("erroCardMes").style.color = "red"
-        document.getElementById("erroCardMes").style.display = "block"
-        document.getElementById("erroCardMes").style.fontSize = "12px"
+    const erroMsg = document.getElementById("erroCardMes")
+    
+    if (cardMes.value.length < 2 || cardMes.value > 12) {
+        erroMsg.innerHTML = "Mês inválido"
+        erroMsg.style.color = "red"
+        erroMsg.style.fontSize = "12px"
+       
+    } else {
+        erroMsg.innerHTML = ""
     }
-    document.getElementById("erroCardMes").innerHTML = ""
 })
 
 const cardAno = document.getElementById("cardAno")
 
 cardAno.addEventListener("blur", function() {
-    if (cardAno.value.length < 2 && cardAno.value >= 19) {
-        document.getElementById("erroCardAno").innerHTML = "Ano inválido"
-        document.getElementById("erroCardAno").style.color = "red"
-        document.getElementById("erroCardAno").style.display = "block"
-        document.getElementById("erroCardAno").style.fontSize = "12px"
+    const erroMsg = document.getElementById("erroCardAno")
+    
+    if (cardAno.value.length < 2 || cardAno.value <= 19) {
+
+        erroMsg.innerHTML = "Ano inválido"
+        console.log(erroMsg)
+        erroMsg.style.color = "red"
+        erroMsg.style.display = "block"
+        erroMsg.style.fontSize = "12px"
+    } else {
+        erroMsg.innerHTML = ""
     }
-    document.getElementById("erroCardAno").innerHTML = ""
 })
 
 const cardCvv = document.getElementById("cardCvv")
@@ -59,8 +69,10 @@ cardCvv.addEventListener("blur", function() {
         document.getElementById("erroCardCvv").style.color = "red"
         document.getElementById("erroCardCvv").style.display = "block"
         document.getElementById("erroCardCvv").style.fontSize = "12px"
+    }else {
+        document.getElementById("erroCardCvv").innerHTML = ""
     }
-    document.getElementById("erroCardCvv").innerHTML = ""
+    
 })
 
 document.getElementById("pagar").onclick = pagar
