@@ -15,17 +15,19 @@
                 <div class="panel-body">
                 <form role="form">
                     <div class="form-group">
-                        <label for="cardNumber">Cartão</label>
+                        <label>Cartão</label>
+                        <span id="erroCardNumber"></span>
                         <div class="input-group">
                             <input type="tel" class="form-control" maxlength='16' id="cardNumber" placeholder="Número do Cartão"
                                 required autofocus />
-                                <span id="erroCardNumber"></span>
+                                
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-7 col-md-7">
                             <div id="expMonth" class="form-group">
                                 <label for="expityMonth">Data</label>
+                                
                                 <div class="row">    
                                     <div class="col-md-6 col-sm-12">
                                         <input type="tel" class="form-control" id="cardMes" placeholder="MM" required />
@@ -42,7 +44,8 @@
                             <div class="form-group">
                                 <label for="cvCode">
                                     CV</label>
-                                <input type="password" minlength='3' class="form-control" id="cardCvv" placeholder="CV" required />
+                                   
+                                <input type="password" maxlength='3' class="form-control" id="cardCvv" placeholder="CV" required />
                                 <span id="erroCardCvv"></span>
                             </div>
                         </div>
