@@ -150,16 +150,16 @@ function renderModal() {
 
 
 function sendItemstoBill() {
-  let pedido = ''
+  let pedido = []
   for (var key in localStorage) {
     if (localStorage.hasOwnProperty(key)) {
       if(localStorage[key] > 0) { 
-        pedido = `${localStorage[key]}kg de ${key}`
+        pedido.push(key)
       } 
     }
   }
  const data =  {
-      items:pedido,
+      items:JSON.stringify(pedido),
       items_id: JSON.stringify(IDS), 
       total:TOTALDACOMPRA, 
       status:'nao-pago'
