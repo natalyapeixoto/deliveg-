@@ -49,10 +49,9 @@ const cardAno = document.getElementById("cardAno")
 cardAno.addEventListener("blur", function() {
     const erroMsg = document.getElementById("erroCardAno")
     
-    if (cardAno.value.length < 2 || cardAno.value <= 19) {
+    if (cardAno.value.length < 2 || cardAno.value < 19) {
 
         erroMsg.innerHTML = "Ano inválido"
-        console.log(erroMsg)
         erroMsg.style.color = "red"
         erroMsg.style.display = "block"
         erroMsg.style.fontSize = "12px"
