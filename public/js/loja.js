@@ -145,7 +145,6 @@ function renderModal() {
       } 
     }
   }
-  sendItemstoBill()
 }   
 
 

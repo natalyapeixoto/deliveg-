@@ -36,7 +36,7 @@
       <form method="post" action="/pedidos"> 
       @csrf
       <input name="pedido" value="" id="sendToDb">
-      <button type="submit" class="btn btn-success" >Finalizar Compra</button>
+      <button type="submit" class="btn btn-success" onclick="sendItemstoBill()">Finalizar Compra</button>
     </form>
       </div>
         </div>
