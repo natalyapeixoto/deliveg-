@@ -8,7 +8,6 @@ function  getProducts () {
     .then(res => res.json())
     .then(res =>{
       prod = res
-      console.log(res)
       renderProducts(res)
     })
 }
@@ -43,8 +42,6 @@ function renderProducts(produtos) {
   if (produtos <= 0) return document.getElementById('produtos-wrapper').innerHTML = 'nenhum produto nesta categoria'
     
   produtos.forEach(produto => {
-    console.log(produto)
-
     document.getElementById('produtos-wrapper').innerHTML += `
     <div class="col-md-4 col-sm-6 col-xs-1" >
       <div class="card">
@@ -106,7 +103,11 @@ function removeItemFromCart(id, preco, nome) {
   if(ITEMS[id]) { 
     ITEMS[id] = parseFloat(ITEMS[id]) - parseFloat(preco)
     ITEMS[nome] -=1
-    localStorage.setItem(nome, --counter)
+    if(localStorage.getItem(nome) <= 0) {
+      localStorage.setItem(nome, 0)
+    } else {
+      localStorage.setItem(nome, --counter)
+    }
     IDS[id] -= 1
   }
 
