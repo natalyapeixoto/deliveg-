@@ -35,7 +35,7 @@
             <?php
 
             $newString = preg_replace('/[^a-zç]/i', ' ', $pedido->items);
-              echo $newString
+              echo utef8_encode($newString);
               ?>
             </td>
             <td>
