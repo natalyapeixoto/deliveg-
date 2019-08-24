@@ -1,4 +1,7 @@
-## deliveg (mvp)
+# Deliveg (mvp)
+- An e-commerce website 
+
+#### Final Project - Curso Fullstack Digital House
 
 ### para rodar o projeto
 * git clone url-do-projeto
@@ -8,15 +11,15 @@
 * rodar documento deliveg_db.txt no MySQL work bench
 * para criar as migrations ```php artisan migrate```
 
-### para contribuir
-* cria sua branch git checkout -b nome-da-branch
-* faz sua contribuição
-* git add .
-* git commit -m "explica o que fez"
-* git pull origin master
-* git push origin nome-da-sua-branch
-* entra no repositório NO GITHUB e faz a pull request.
+### Technologies Used: 
 
+* PHP 
+* Laravel 
+* JavaScript 
+* MySQL 
+* HTML 
+* CSS/Bootstrap 
+* Heroku 
 
 ## Link Heroku
  http://deliveg.herokuapp.com/
